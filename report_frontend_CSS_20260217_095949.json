@@ -1,0 +1,45 @@
+{
+  "interview_metadata": {
+    "category": "frontend",
+    "skill": "CSS",
+    "start_time": "2026-02-17T09:58:23.788576",
+    "end_time": "2026-02-17T09:59:46.914189",
+    "num_questions": 2
+  },
+  "overall_score": 50.0,
+  "summary": "You scored 50.0/100 on this CSS interview.",
+  "strengths": [
+    "Completed the interview"
+  ],
+  "areas_for_improvement": [
+    "Review the technical concepts covered",
+    "Practice explaining answers more clearly"
+  ],
+  "recommendations": [
+    "Study CSS fundamentals",
+    "Practice more technical interviews"
+  ],
+  "question_evaluations": [
+    {
+      "question": "What is flexbox?",
+      "expected_answer": "A one-dimensional layout method for arranging items in rows or columns",
+      "candidate_answer": "[Extraction failed]",
+      "score": 50,
+      "feedback": "Unable to evaluate automatically. Please review manually.",
+      "covered_points": [],
+      "missed_points": [],
+      "accuracy": "unknown"
+    },
+    {
+      "question": "What is the box model?",
+      "expected_answer": "The CSS box model consists of content, padding, border, and margin",
+      "candidate_answer": "[Extraction failed]",
+      "score": 50,
+      "feedback": "Unable to evaluate automatically. Please review manually.",
+      "covered_points": [],
+      "missed_points": [],
+      "accuracy": "unknown"
+    }
+  ],
+  "generated_at": "2026-02-17T09:59:49.632634"
+}
