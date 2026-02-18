@@ -12,23 +12,25 @@ from livekit.agents import (
     inference,
     room_io,
 )
-from livekit.plugins import noise_cancellation, silero, deepgram, openai, cartesia
+from livekit.plugins import deepgram, langchain, noise_cancellation, silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
+from interview.langgraph_workflow import create_interview_workflow
+
 logger = logging.getLogger("agent")
-import os
 
 load_dotenv(".env.local")
 
 
 class Assistant(Agent):
     def __init__(self) -> None:
-        super().__init__(
-            instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
-            You eagerly assist users with their questions by providing information from your extensive knowledge.
-            Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
-            You are curious, friendly, and have a sense of humor.""",
-        )
+        super().__init__(instructions=(
+            "You are a professional interviewer conducting a job interview. "
+            "The LangGraph workflow will drive the conversation flow. "
+            "Simply speak the questions and responses as they come from the graph. "
+            "Be professional and helpful throughout the interview process."
+            "Don't add any extra information or conversation. Don't exceed more than two lines of character limit."
+        ))
 
     # To add tools, use the @function_tool decorator.
     # Here's an example that adds a simple weather tool.
@@ -51,13 +53,6 @@ class Assistant(Agent):
 server = AgentServer()
 
 
-def prewarm(proc: JobProcess):
-    proc.userdata["vad"] = silero.VAD.load()
-
-
-server.setup_fnc = prewarm
-
-
 @server.rtc_session()
 async def my_agent(ctx: JobContext):
     # Logging setup
@@ -66,18 +61,20 @@ async def my_agent(ctx: JobContext):
         "room": ctx.room.name,
     }
 
-    # Set up a voice AI pipeline using OpenAI, Cartesia, Deepgram, and the LiveKit turn detector
+    # Set up a voice AI pipeline using LangGraph workflow as LLM, Cartesia, Deepgram, and the LiveKit turn detector
+    interview_workflow = create_interview_workflow()
+
     session = AgentSession(
         # Speech-to-text (STT) is your agent's ears, turning the user's speech into text that the LLM can understand
         # See all available models at https://docs.livekit.io/agents/models/stt/
         stt=deepgram.STT(model="nova-2"),
-        # A Large Language Model (LLM) is your agent's brain, processing user input and generating a response
-        # See all available models at https://docs.livekit.io/agents/models/llm/
-        llm=openai.LLM(
-            model="llama-3.3-70b-versatile",
-            base_url="https://api.groq.com/openai/v1",
-            api_key=os.getenv("GROQ_API_KEY"),
-        ),
+        # LangGraph workflow as LLM via LLMAdapter
+        # See https://docs.livekit.io/agents/models/llm/plugins/langchain/
+        llm=langchain.LLMAdapter(graph=interview_workflow, config={
+        "configurable": {
+            "thread_id": ctx.room.name
+        }
+    }),
         # Text-to-speech (TTS) is your agent's voice, turning the LLM's text into speech that the user can hear
         # See all available models as well as voice selections at https://docs.livekit.io/agents/models/tts/
         tts=inference.TTS(
@@ -86,7 +83,7 @@ async def my_agent(ctx: JobContext):
         # VAD and turn detection are used to determine when the user is speaking and when the agent should respond
         # See more at https://docs.livekit.io/agents/build/turns
         turn_detection=MultilingualModel(),
-        vad=ctx.proc.userdata["vad"],
+        vad=silero.VAD.load(),
         # allow the LLM to generate a response while waiting for the end of turn
         # See more at https://docs.livekit.io/agents/build/audio/#preemptive-generation
         preemptive_generation=True,
@@ -110,7 +107,7 @@ async def my_agent(ctx: JobContext):
     # # Start the avatar and wait for it to join
     # await avatar.start(session, room=ctx.room)
 
-    # Start the session, which initializes the voice pipeline and warms up the models
+    # Start the session (LangGraph workflow handles the interview logic)
     await session.start(
         agent=Assistant(),
         room=ctx.room,
@@ -126,8 +123,6 @@ async def my_agent(ctx: JobContext):
         ),
     )
 
-    # Join the room and connect to the user
-    await ctx.connect()
 
 
 if __name__ == "__main__":

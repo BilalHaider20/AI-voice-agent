@@ -69,6 +69,41 @@ lk cloud auth
 lk app env -w -d .env.local
 ```
 
+## Interview Agent (LangGraph + ChromaDB)
+
+This project includes a **professional technical interview** voice agent:
+
+- **ChromaDB**: 30k questions indexed by category/skill/level; one vector query per interview (20–50 ms).
+- **LangGraph**: Strict 6-node state machine (greeting → load questions → ask → capture answer → report); no repeated questions; LLM does not control state.
+- **LiveKit**: STT → LLM (tools: `begin_interview`, `submit_answer`) → TTS.
+
+### What you need to do
+
+1. **Excel file**  
+   Your sheet must have these columns (your existing `level` column is used as-is):
+   - **Required:** `category`, `skill`, `question`, `answer`
+   - **Optional:** `level` (e.g. easy/medium/hard), `answer_keywords`, `topic_tags`
+
+2. **Build the index once** (run from project root):
+   ```console
+   uv run python build_index.py path/to/questions.xlsx
+   ```
+   This creates `./interview_db`. Re-run whenever you change the Excel file.
+
+3. **Environment**  
+   In `.env.local` (or `lk app env`):
+   - `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` (for LiveKit)
+   - `GROQ_API_KEY` (for LLM and report generation; optional fallback: `OPENAI_API_KEY`)
+
+4. **Run the agent**
+   ```console
+   uv run python src/agent.py download-files   # once
+   uv run python src/agent.py console         # or dev / start
+   ```
+   Then say which technology and skill you want (e.g. “frontend HTML”); the agent will ask 10 questions and deliver a scored report.
+
+Reports can be persisted to Supabase by extending `deliver_report_node` in `src/interview/nodes.py`.
+
 ## Run the agent
 
 Before your first run, you must download certain models such as [Silero VAD](https://docs.livekit.io/agents/build/turns/vad/) and the [LiveKit turn detector](https://docs.livekit.io/agents/build/turns/turn-detector/):
