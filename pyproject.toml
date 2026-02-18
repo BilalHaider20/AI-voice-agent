@@ -15,6 +15,13 @@ dependencies = [
     "livekit-plugins-openai",
     "livekit-plugins-cartesia",
     "python-dotenv",
+    "langchain-groq>=1.1.2",
+    "langchain-core>=1.2.13",
+    "chromadb>=1.5.0",
+    "sentence-transformers>=5.2.3",
+    "pandas>=2.3.3",
+    "openpyxl>=3.1.5",
+    "langgraph>=1.0.8",
 ]
 
 [dependency-groups]

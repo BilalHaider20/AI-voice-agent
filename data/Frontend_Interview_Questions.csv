@@ -1,0 +1,601 @@
+category,skill,level,question,answer
+Frontend,HTML,Easy,What does HTML stand for?,HyperText Markup Language.
+Frontend,HTML,Easy,What is the latest version of HTML?,HTML5.
+Frontend,HTML,Easy,What is the purpose of HTML?,To structure and display content on web pages.
+Frontend,HTML,Easy,What is the difference between HTML and CSS?,"HTML structures content, CSS styles it."
+Frontend,HTML,Easy,What is the difference between HTML and JavaScript?,"HTML structures content, JavaScript adds interactivity."
+Frontend,HTML,Easy,What is a tag in HTML?,"A tag defines an element in HTML, written inside < >."
+Frontend,HTML,Easy,What is an element in HTML?,"An element consists of a start tag, content, and an end tag."
+Frontend,HTML,Easy,What are attributes in HTML?,"Attributes provide extra information about elements, e.g., href in <a>."
+Frontend,HTML,Easy,What is the root element of an HTML page?,<html>.
+Frontend,HTML,Easy,Which tag is used to create a hyperlink?,<a>.
+Frontend,HTML,Easy,Which tag is used to insert an image?,<img>.
+Frontend,HTML,Easy,What is the alt attribute in <img> tag?,It provides alternative text if the image is not displayed.
+Frontend,HTML,Easy,Which tag is used for line breaks?,<br>.
+Frontend,HTML,Easy,Which tag is used for horizontal lines?,<hr>.
+Frontend,HTML,Easy,Which tag is used to create headings?,<h1> to <h6>.
+Frontend,HTML,Easy,Which tag is used to create a paragraph?,<p>.
+Frontend,HTML,Easy,Which tag is used for bold text?,<b> or <strong>.
+Frontend,HTML,Easy,Which tag is used for italic text?,<i> or <em>.
+Frontend,HTML,Easy,Which tag is used to display preformatted text?,<pre>.
+Frontend,HTML,Easy,Which tag is used to create a list with bullets?,<ul>.
+Frontend,HTML,Easy,Which tag is used to create a numbered list?,<ol>.
+Frontend,HTML,Easy,Which tag is used to create a list item?,<li>.
+Frontend,HTML,Easy,Which tag is used to create a table?,<table>.
+Frontend,HTML,Easy,Which tags are used inside a table?,"<tr>, <th>, <td>."
+Frontend,HTML,Easy,Which tag is used to create a form?,<form>.
+Frontend,HTML,Easy,Which tag is used to create an input field?,<input>.
+Frontend,HTML,Easy,Which tag is used to create a dropdown menu?,<select>.
+Frontend,HTML,Easy,Which tag is used to create options inside a dropdown?,<option>.
+Frontend,HTML,Easy,Which tag is used for checkboxes?,"<input type=""checkbox"">."
+Frontend,HTML,Easy,Which tag is used for radio buttons?,"<input type=""radio"">."
+Frontend,HTML,Easy,Which tag is used for submitting a form?,"<input type=""submit""> or <button type=""submit"">."
+Frontend,HTML,Easy,What does the <head> tag contain?,"Metadata, title, links, scripts, styles."
+Frontend,HTML,Easy,Which tag defines the title of a webpage?,<title>.
+Frontend,HTML,Easy,Which tag is used to include CSS in HTML?,<link> or <style>.
+Frontend,HTML,Easy,Which tag is used to include JavaScript in HTML?,<script>.
+Frontend,HTML,Easy,What is the difference between <div> and <span>?,"<div> is a block element, <span> is inline."
+Frontend,HTML,Easy,What is the difference between block and inline elements?,Block takes full width and starts new line; inline takes only necessary space.
+Frontend,HTML,Easy,What is semantic HTML?,"HTML that conveys meaning, like <header>, <footer>, <article>."
+Frontend,HTML,Easy,What is the difference between <strong> and <b>?,"<strong> indicates importance, <b> only makes text bold."
+Frontend,HTML,Easy,What is the difference between <em> and <i>?,"<em> emphasizes text, <i> only makes text italic."
+Frontend,HTML,Easy,What is the difference between absolute and relative URLs?,"Absolute includes full path, relative depends on current location."
+Frontend,HTML,Easy,Which attribute is used to open a link in a new tab?,"target=""_blank""."
+Frontend,HTML,Easy,Which tag is used for inline frames?,<iframe>.
+Frontend,HTML,Easy,Which attribute specifies the source of an image?,src.
+Frontend,HTML,Easy,What does the placeholder attribute do?,Displays hint text inside an input field.
+Frontend,HTML,Easy,What is the purpose of the required attribute?,Makes form fields mandatory.
+Frontend,HTML,Easy,What does the readonly attribute do?,Makes an input uneditable but still visible.
+Frontend,HTML,Easy,What does the disabled attribute do?,Disables an input so users cannot interact with it.
+Frontend,HTML,Easy,Which tag is used to display a video?,<video>.
+Frontend,HTML,Easy,Which tag is used to display audio?,<audio>.
+Frontend,HTML,Medium,What is the difference between HTML4 and HTML5?,"HTML5 introduced new semantic tags, multimedia support, form controls, and APIs."
+Frontend,HTML,Medium,What are semantic tags in HTML5?,"Tags that add meaning, e.g., <header>, <footer>, <article>, <section>."
+Frontend,HTML,Medium,What is the difference between <section> and <article>?,"<section> groups related content, <article> is independent content (like a blog post)."
+Frontend,HTML,Medium,What is the difference between <header> and <head>?,"<header> is a page/section header, <head> contains metadata and resources."
+Frontend,HTML,Medium,What is the difference between <figure> and <img>?,"<figure> groups an image with a caption using <figcaption>, while <img> only displays the image."
+Frontend,HTML,Medium,What is the difference between <main> and <body>?,"<main> holds the primary content, <body> contains everything visible in the page."
+Frontend,HTML,Medium,What is the use of <nav> tag?,It defines navigation links.
+Frontend,HTML,Medium,"What is the difference between inline, internal, and external CSS in HTML?","Inline is inside a tag, internal inside <style>, external via <link>."
+Frontend,HTML,Medium,What is the difference between <link> and <a> tag?,"<link> is for resources (CSS, favicon), <a> creates hyperlinks."
+Frontend,HTML,Medium,What is the difference between id and class in HTML?,"Id is unique for one element, class can be shared by multiple elements."
+Frontend,HTML,Medium,"What is the difference between relative, absolute, and fixed paths for links?","Relative is based on current file, absolute is full URL, fixed path is from root."
+Frontend,HTML,Medium,What is the difference between <script> in <head> and at end of <body>?,"In <head> it loads before content (can block rendering), in <body> it loads after content."
+Frontend,HTML,Medium,What is the difference between <noscript> and <script>?,<noscript> defines content shown if JavaScript is disabled.
+Frontend,HTML,Medium,What is the difference between defer and async in <script>?,"async loads script while parsing, defer runs after HTML is parsed."
+Frontend,HTML,Medium,What is the difference between inline elements and block-level elements in HTML5?,"Block takes full width (e.g., <div>), inline fits only content (e.g., <span>)."
+Frontend,HTML,Medium,What is the difference between <em> and <mark>?,"<em> emphasizes text, <mark> highlights text."
+Frontend,HTML,Medium,What is the difference between <small> and <sub>?,"<small> reduces font size, <sub> makes text subscript."
+Frontend,HTML,Medium,What is the difference between <abbr> and <acronym>?,"<abbr> defines an abbreviation with title, <acronym> is obsolete in HTML5."
+Frontend,HTML,Medium,What is the difference between <u> and <ins>?,"<u> underlines text visually, <ins> represents inserted text semantically."
+Frontend,HTML,Medium,What is the difference between <bdo> and <bdi>?,"<bdo> overrides text direction, <bdi> isolates bidirectional text."
+Frontend,HTML,Medium,"What is the difference between <meta charset=""UTF-8""> and <meta http-equiv>?","charset defines character encoding, http-equiv sets HTTP header-like metadata."
+Frontend,HTML,Medium,What is the difference between viewport meta tag and responsive design?,"Viewport meta controls scaling, responsive design adapts layout via CSS."
+Frontend,HTML,Medium,What is the purpose of alt and title attributes in images?,"alt is for accessibility/SEO, title shows tooltip on hover."
+Frontend,HTML,Medium,"What is the difference between inline SVG and <img src=""svg"">?","Inline SVG allows styling and scripting, <img> is just an image reference."
+Frontend,HTML,Medium,What is the difference between <video> controls and <audio> controls?,"Both add media players, <video> shows visual controls, <audio> has sound-only."
+Frontend,HTML,Medium,What is the difference between <canvas> and <svg>?,"<canvas> is pixel-based drawing, <svg> is vector-based graphics."
+Frontend,HTML,Medium,What is the difference between <source> and <track> in media tags?,"<source> specifies media files, <track> adds captions/subtitles."
+Frontend,HTML,Medium,What is the difference between GET and POST in HTML forms?,"GET appends data in URL, POST sends in request body."
+Frontend,HTML,Medium,What is the difference between action and method in forms?,"action specifies where data goes, method specifies how (GET/POST)."
+Frontend,HTML,Medium,What is the difference between name and id attributes in forms?,"name is for form submission, id uniquely identifies element in DOM."
+Frontend,HTML,Medium,What is the difference between required and pattern attributes?,"required makes a field mandatory, pattern enforces regex format."
+Frontend,HTML,Medium,What is the difference between disabled and readonly in inputs?,"disabled field cannot be edited or submitted, readonly is not editable but submitted."
+Frontend,HTML,Medium,What is the difference between checkbox and radio button?,"Checkbox allows multiple selections, radio allows only one in a group."
+Frontend,HTML,Medium,What is the difference between <datalist> and <select>?,"<datalist> gives suggestions with free typing, <select> restricts to options."
+Frontend,HTML,Medium,What is the difference between placeholder and value attributes in inputs?,"placeholder shows hint text, value shows actual input value."
+Frontend,HTML,Medium,What is the difference between <label> with for and without for?,"With for, label links to an input id; without, input must be nested inside label."
+Frontend,HTML,Medium,What is the difference between <fieldset> and <legend>?,"<fieldset> groups form elements, <legend> provides a caption."
+Frontend,HTML,Medium,What is the difference between <meter> and <progress>?,"<meter> shows a known measurement (e.g., score), <progress> shows task progress."
+Frontend,HTML,Medium,What is the difference between inline event handling and JavaScript event listeners?,"Inline uses onclick in HTML, listeners use JavaScript’s addEventListener()."
+Frontend,HTML,Medium,What is the difference between accessibility and SEO in HTML?,"Accessibility improves usability for all users, SEO improves search ranking."
+Frontend,HTML,Medium,What is ARIA in HTML?,Accessible Rich Internet Applications – attributes that improve screen reader support.
+Frontend,HTML,Medium,What is the difference between aria-label and alt?,"aria-label is for accessibility on any element, alt is specific to images."
+Frontend,HTML,Medium,"What is the difference between absolute, relative, and fixed positioning in HTML/CSS?","Absolute positions relative to nearest ancestor, relative to itself, fixed to viewport."
+Frontend,HTML,Medium,What is the difference between inline frames and embedding with <object>?,"<iframe> embeds another webpage, <object> can embed media, PDFs, etc."
+Frontend,HTML,Medium,"What is the difference between cookies, localStorage, and sessionStorage in HTML5?","Cookies are small server-stored data, localStorage persists, sessionStorage clears when tab closes."
+Frontend,HTML,Medium,What is the difference between HTML entities and Unicode characters?,"Entities use &entity; (e.g., &lt;), Unicode uses actual code points."
+Frontend,HTML,Medium,What is the difference between <base> tag and <link> tag?,"<base> sets default URL for links, <link> references external resources."
+Frontend,HTML,Medium,What is the difference between inline styles and external stylesheets for performance?,"Inline increases page size, external allows caching and reuse."
+Frontend,HTML,Medium,What is the difference between HTML validation and linting?,"Validation checks HTML against W3C rules, linting checks coding style and errors."
+Frontend,HTML,Medium,What is the difference between inline HTML comments and conditional comments?,"Inline comments <!-- comment --> hide code from rendering, conditional comments (used in old IE) apply only to specific Internet Explorer versions."
+Frontend,HTML,Hard,What is the difference between HTML and XHTML?,"XHTML is stricter, requires proper nesting, lowercase tags, and closed elements."
+Frontend,HTML,Hard,What is the difference between HTML5 and older versions regarding doctype?,"HTML5 uses a simple <!DOCTYPE html>, older versions had long doctypes."
+Frontend,HTML,Hard,What is the difference between quirks mode and standards mode?,"Quirks mode emulates old browsers, standards mode follows modern HTML/CSS rules."
+Frontend,HTML,Hard,How does HTML5 improve SEO compared to HTML4?,"Semantic tags like <article>, <section>, <nav> help search engines understand content."
+Frontend,HTML,Hard,"What is the difference between microdata, RDFa, and JSON-LD?","All provide structured data; JSON-LD is preferred by Google, microdata is inline, RDFa uses attributes."
+Frontend,HTML,Hard,"What is the difference between <meta name=""keywords""> and <meta name=""description"">?","Keywords are mostly ignored by search engines, description is used in search snippets."
+Frontend,HTML,Hard,"What is the difference between rel=""noopener"" and rel=""noreferrer"" in links?","noopener prevents window.opener access, noreferrer hides referrer information."
+Frontend,HTML,Hard,What is the difference between sandbox attribute in <iframe> and CSP?,"Sandbox restricts iframe capabilities, CSP controls overall resource security."
+Frontend,HTML,Hard,What is the difference between progressive rendering and lazy loading?,"Progressive rendering loads content as it arrives, lazy loading defers offscreen content."
+Frontend,HTML,Hard,What is the difference between <picture> and <img srcset>?,"<picture> gives full control for responsive images, srcset selects best resolution."
+Frontend,HTML,Hard,What is the difference between accessibility tree and DOM tree?,"DOM is full HTML structure, accessibility tree is simplified view for assistive tech."
+Frontend,HTML,Hard,"What is the difference between aria-hidden=""true"" and hidden attribute?","aria-hidden hides from screen readers only, hidden hides from all users."
+Frontend,HTML,Hard,What is the difference between Shadow DOM and regular DOM?,"Shadow DOM encapsulates styles/components, regular DOM is global."
+Frontend,HTML,Hard,What is the difference between <slot> in web components and <template>?,"<slot> is a placeholder in Shadow DOM, <template> defines reusable HTML fragments."
+Frontend,HTML,Hard,What is the difference between <noscript> and feature detection in JS?,"<noscript> shows fallback when JS is disabled, feature detection adapts dynamically."
+Frontend,HTML,Hard,What is the difference between WebSockets and Server-Sent Events in HTML5?,"WebSockets allow bidirectional communication, SSE is one-way server → client."
+Frontend,HTML,Hard,What is the difference between <progress> max value and <meter> value range?,"<progress> shows task completion up to max, <meter> represents a bounded measurement."
+Frontend,HTML,Hard,What is the difference between contenteditable attribute and textarea?,"contenteditable allows inline editing of any element, <textarea> is a form field."
+Frontend,HTML,Hard,What is the difference between autofocus and tabindex attributes?,"autofocus gives focus on load, tabindex controls tab order navigation."
+Frontend,HTML,Hard,What is the difference between passive event listeners and regular ones in HTML5?,Passive listeners improve scroll performance by preventing default blocking.
+Frontend,HTML,Hard,What is the difference between preloading and prefetching in HTML?,"Preload fetches resources needed soon, prefetch fetches resources likely needed later."
+Frontend,HTML,Hard,What is the difference between defer and module type in scripts?,"defer runs after parsing, type=""module"" also supports import/export."
+Frontend,HTML,Hard,What is the difference between crossorigin attribute in images and scripts?,"It enables CORS requests for external resources like fonts, images, scripts."
+Frontend,HTML,Hard,What is the difference between HTTP/1.1 and HTTP/2 in terms of HTML rendering?,"HTTP/2 allows multiplexing, faster loading, fewer <link> hacks."
+Frontend,HTML,Hard,"What is the difference between cookies, localStorage, sessionStorage, and IndexedDB?","Cookies store small data with server access, localStorage persists, sessionStorage clears per tab, IndexedDB is large structured storage."
+Frontend,HTML,Hard,What is the difference between service workers and web workers?,"Service workers run in background, handle caching/offline, web workers run parallel tasks."
+Frontend,HTML,Hard,What is the difference between manifest.json in PWA and cache storage?,"Manifest defines app metadata, cache storage handles offline assets."
+Frontend,HTML,Hard,What is the difference between semantic HTML and ARIA roles?,"Semantic HTML is built-in meaning, ARIA roles extend accessibility when semantics aren’t enough."
+Frontend,HTML,Hard,What is the difference between intrinsic and extrinsic sizing in HTML elements?,"Intrinsic is based on content size, extrinsic is based on CSS/layout constraints."
+Frontend,HTML,Hard,What is the difference between stacking context and z-index in HTML/CSS?,"Stacking context is a hierarchy of elements, z-index works only within its context."
+Frontend,HTML,Hard,What is the difference between DOMContentLoaded and load event?,"DOMContentLoaded fires after HTML parsing, load fires after all resources load."
+Frontend,HTML,Hard,What is the difference between Critical Rendering Path and Repaint/Reflow?,"CRP is the steps browser takes to render, repaint is visual update, reflow recalculates layout."
+Frontend,HTML,Hard,What is the difference between inline scripts blocking vs async scripts?,"Inline and sync scripts block parsing, async scripts load in parallel."
+Frontend,HTML,Hard,What is the difference between FOUC and FOIT in HTML rendering?,"FOUC = Flash of Unstyled Content, FOIT = Flash of Invisible Text (fonts)."
+Frontend,HTML,Hard,What is the difference between DNS prefetch and preconnect?,"DNS-prefetch resolves domain, preconnect establishes early TCP/SSL."
+Frontend,HTML,Hard,"What is the difference between link rel=""canonical"" and rel=""alternate""?","Canonical specifies preferred URL, alternate is for translations or AMP pages."
+Frontend,HTML,Hard,What is the difference between AMP HTML and regular HTML?,"AMP is a restricted, optimized HTML for faster loading on mobile."
+Frontend,HTML,Hard,What is the difference between hydration in SSR and static HTML rendering?,"Hydration attaches JS to server-rendered HTML, static HTML has no interactivity."
+Frontend,HTML,Hard,What is the difference between CSP script-src 'self' and 'unsafe-inline'?,"'self' allows only same-origin scripts, 'unsafe-inline' allows inline scripts (less secure)."
+Frontend,HTML,Hard,"What is the difference between rel=""preload"" and rel=""dns-prefetch""?","Preload fetches critical resources, dns-prefetch resolves domain lookup only."
+Frontend,HTML,Hard,"What is the difference between lazy loading images with loading=""lazy"" and JS-based lazy load?","Native loading=""lazy"" is browser-managed, JS-based uses IntersectionObserver."
+Frontend,HTML,Hard,What is the difference between srcdoc attribute in iframe and src?,"srcdoc provides inline HTML code, src loads external URL."
+Frontend,HTML,Hard,What is the difference between <object> and <embed> tags?,"<object> is more flexible and standard, <embed> is simpler but less supported."
+Frontend,HTML,Hard,What is the difference between inline-block and flex containers for HTML layouts?,"Inline-block aligns inline but doesn’t support full layout features, flex provides alignment and spacing."
+Frontend,HTML,Hard,"What is the difference between viewport units (vh, vw) and percentages?","VH/VW are relative to viewport size, % is relative to parent container."
+Frontend,HTML,Hard,What is the difference between nosniff header and MIME type in HTML resources?,X-Content-Type-Options: nosniff prevents browser from guessing MIME type.
+Frontend,HTML,Hard,What is the difference between HTML parsing error handling in browsers?,"Browsers follow error-tolerant parsing, not strict like XML."
+Frontend,HTML,Hard,What is the difference between <isindex> tag and modern search inputs?,"<isindex> was an old single-input search element, replaced by <input type=""search"">."
+Frontend,HTML,Hard,What is the difference between Shadow DOM closed mode and open mode?,"Open mode allows JS access via .shadowRoot, closed mode prevents it."
+Frontend,HTML,Hard,What is the difference between document.write and DOM methods for adding elements?,"document.write blocks rendering and is discouraged, DOM methods are safer and dynamic."
+Frontend,CSS,Easy,Explain what CSS stands for.,"CSS stands for Cascading Style Sheets, used to style HTML elements."
+Frontend,CSS,Easy,How do you link a CSS file to an HTML page?,"Using the <link rel=""stylesheet"" href=""style.css""> tag inside <head>."
+Frontend,CSS,Easy,Which attribute inside HTML tags allows inline CSS?,The style attribute.
+Frontend,CSS,Easy,Give an example of a CSS property for text color.,color: red;
+Frontend,CSS,Easy,"State the difference between inline, internal, and external CSS.","Inline uses style attribute, internal uses <style> inside HTML, external uses a separate .css file."
+Frontend,CSS,Easy,Mention the symbol used for IDs in CSS.,# is used for IDs.
+Frontend,CSS,Easy,Mention the symbol used for classes in CSS.,. is used for classes.
+Frontend,CSS,Easy,How do you change background color with CSS?,background-color: yellow;
+Frontend,CSS,Easy,Write the CSS to make text bold.,font-weight: bold;
+Frontend,CSS,Easy,Which CSS property is used for text size?,font-size
+Frontend,CSS,Easy,How do you underline text in CSS?,text-decoration: underline;
+Frontend,CSS,Easy,What is the default position property of HTML elements?,static
+Frontend,CSS,Easy,Name the CSS property used to align text to the center.,text-align: center;
+Frontend,CSS,Easy,How do you make a list without bullets using CSS?,list-style-type: none;
+Frontend,CSS,Easy,Which property controls spacing between lines of text?,line-height
+Frontend,CSS,Easy,How do you apply multiple classes to a single element?,"Add them separated by spaces: class=""class1 class2""."
+Frontend,CSS,Easy,Which CSS property is used to add space inside an element’s border?,padding
+Frontend,CSS,Easy,Which CSS property adds space outside an element’s border?,margin
+Frontend,CSS,Easy,What is the difference between relative and absolute units in CSS?,"Relative units depend on other values (e.g., %, em), absolute units are fixed (e.g., px)."
+Frontend,CSS,Easy,How do you make an element’s font italic in CSS?,font-style: italic;
+Frontend,CSS,Easy,Which CSS property changes the typeface of text?,font-family
+Frontend,CSS,Easy,How do you change the width of a border in CSS?,Using border-width.
+Frontend,CSS,Easy,Write CSS to create a dashed border.,border: 2px dashed blue;
+Frontend,CSS,Easy,What is the difference between inline-block and block display?,"Block takes full width, inline-block allows inline placement with block properties."
+Frontend,CSS,Easy,How do you hide an element but keep its space reserved?,visibility: hidden;
+Frontend,CSS,Easy,How do you hide an element and remove its space completely?,display: none;
+Frontend,CSS,Easy,Which property controls how content overflows a box?,overflow
+Frontend,CSS,Easy,Write CSS to make an element fixed at the top.,position: fixed; top: 0;
+Frontend,CSS,Easy,Explain the difference between absolute and fixed positioning.,"Absolute is positioned relative to the nearest positioned ancestor, fixed is relative to the viewport."
+Frontend,CSS,Easy,Which CSS property controls cursor style?,cursor
+Frontend,CSS,Easy,How do you make a background image repeat horizontally only?,background-repeat: repeat-x;
+Frontend,CSS,Easy,Which property controls background image size?,background-size
+Frontend,CSS,Easy,How do you create a gradient background in CSS?,"Using background: linear-gradient(color1, color2);"
+Frontend,CSS,Easy,Which CSS property changes the opacity of an element?,opacity
+Frontend,CSS,Easy,What is the difference between em and rem units?,"em is relative to parent font size, rem is relative to root font size."
+Frontend,CSS,Easy,Which property changes capitalization of text?,text-transform
+Frontend,CSS,Easy,Give the CSS to make the first letter of a paragraph larger.,Use pseudo-element: p::first-letter { font-size: 200%; }
+Frontend,CSS,Easy,How do you select all <p> tags inside a <div>?,div p { ... }
+Frontend,CSS,Easy,Which selector is used for hover effects?,:hover
+Frontend,CSS,Easy,Write CSS to apply style only to even rows of a table.,tr:nth-child(even) { ... }
+Frontend,CSS,Easy,How do you apply a style only if an input is focused?,Using input:focus { ... }
+Frontend,CSS,Easy,How do you center a block element horizontally with CSS?,margin: 0 auto;
+Frontend,CSS,Easy,Explain the difference between inline and block elements in CSS terms.,"Inline doesn’t start on a new line, block takes full width."
+Frontend,CSS,Easy,Which CSS property controls element stacking order?,z-index
+Frontend,CSS,Easy,Which property allows rounded corners?,border-radius
+Frontend,CSS,Easy,What is the difference between relative and absolute paths in CSS URLs?,"Relative depends on file location, absolute uses full path."
+Frontend,CSS,Easy,How do you make an image responsive in CSS?,max-width: 100%; height: auto;
+Frontend,CSS,Easy,Write CSS to fix a footer at the bottom of the page.,position: fixed; bottom: 0; width: 100%;
+Frontend,CSS,Easy,Which property is used for shadow effects?,box-shadow or text-shadow.
+Frontend,CSS,Easy,What is the difference between inline-style and external CSS in terms of performance?,"External CSS is cached and reusable, inline must load every time."
+Frontend,CSS,Medium,"Differentiate between relative, absolute, fixed, and sticky positioning.","Relative moves based on its normal position, absolute positions relative to ancestor, fixed is relative to viewport, sticky toggles between relative/fixed depending on scroll."
+Frontend,CSS,Medium,How does the z-index property work when elements overlap?,"It defines stack order; higher values appear above lower ones, but only works on positioned elements."
+Frontend,CSS,Medium,Which CSS property ensures a child element doesn’t overflow its parent container?,overflow: hidden;
+Frontend,CSS,Medium,How would you make an element appear only on print view?,Use @media print { ... }.
+Frontend,CSS,Medium,What is the difference between inline-block and flex layout?,Inline-block arranges items inline but lacks advanced alignment; flex provides powerful alignment/distribution controls.
+Frontend,CSS,Medium,When should you use min-width vs max-width in media queries?,"min-width applies styles on wider screens (mobile-first), max-width applies styles on narrower screens (desktop-first)."
+Frontend,CSS,Medium,"Explain the difference between absolute units (px) and relative units (em, %, vh).",Absolute is fixed; relative units scale based on parent or viewport.
+Frontend,CSS,Medium,How can you center an element vertically inside a container using Flexbox?,display: flex; align-items: center;
+Frontend,CSS,Medium,What is the difference between relative length units em and rem?,"em depends on parent’s font size, rem depends on root (html) font size."
+Frontend,CSS,Medium,Which CSS property allows you to control the aspect ratio of elements?,aspect-ratio.
+Frontend,CSS,Medium,How do you select an element that comes immediately after another element?,Adjacent sibling selector A + B.
+Frontend,CSS,Medium,Explain the difference between pseudo-classes and pseudo-elements.,"Pseudo-classes (:hover) define states, pseudo-elements (::before) create virtual elements."
+Frontend,CSS,Medium,How would you apply a style to all <p> elements inside a <div> with class box?,.box p { ... }
+Frontend,CSS,Medium,Write CSS to make only the first child of a list bold.,li:first-child { font-weight: bold; }
+Frontend,CSS,Medium,What’s the difference between absolute and relative file paths in CSS url()?,"Relative depends on stylesheet location, absolute includes full path."
+Frontend,CSS,Medium,How do you create a fixed responsive grid without using frameworks?,"Use display: grid; grid-template-columns: repeat(auto-fit, minmax(...));."
+Frontend,CSS,Medium,What is the difference between relative and sticky positioning?,"Sticky behaves like relative until a scroll threshold, then sticks like fixed."
+Frontend,CSS,Medium,How do you apply different styles for dark mode users?,Using @media (prefers-color-scheme: dark) { ... }.
+Frontend,CSS,Medium,Write CSS to style all <input> elements except checkboxes.,input:not([type=checkbox]) { ... }
+Frontend,CSS,Medium,What is the difference between CSS transitions and animations?,"Transitions need a trigger (like hover), animations run automatically with keyframes."
+Frontend,CSS,Medium,How can you create a triangle shape in CSS without images?,Using borders: width:0; height:0; border-left:...; border-right:...; border-bottom:...;.
+Frontend,CSS,Medium,Which CSS function is used for color transparency?,rgba() or hsla().
+Frontend,CSS,Medium,What is the difference between absolute and relative positioning inside a flex container?,"Absolute ignores flex rules, relative still participates in flex layout."
+Frontend,CSS,Medium,How do you select every odd row of a table?,tr:nth-child(odd) { ... }
+Frontend,CSS,Medium,What does the clip-path property do?,"Defines a visible region of an element, hiding the rest."
+Frontend,CSS,Medium,Explain the difference between inline SVG and CSS background SVG.,"Inline SVG is part of DOM and styleable, background SVG is treated like an image."
+Frontend,CSS,Medium,How would you apply different styles for high-resolution screens (retina)?,Use @media only screen and (min-resolution: 2dppx) { ... }.
+Frontend,CSS,Medium,What is the difference between relative and absolute imports of fonts?,"Relative depends on file location, absolute is a full URL (like Google Fonts)."
+Frontend,CSS,Medium,How do CSS variables (--var) differ from preprocessor variables like SASS?,CSS variables are runtime and cascade; SASS variables are compile-time only.
+Frontend,CSS,Medium,Write CSS to apply hover effect only on devices that support hover.,@media (hover: hover) { a:hover { ... } }
+Frontend,CSS,Medium,How can you force an element to stay inside a parent even if larger?,overflow: auto; or max-width: 100%;.
+Frontend,CSS,Medium,What’s the difference between grid and flexbox?,"Flexbox is one-dimensional (row or column), grid is two-dimensional (rows and columns)."
+Frontend,CSS,Medium,How do you create equal column heights using flexbox?,Flex items automatically stretch by default (align-items: stretch).
+Frontend,CSS,Medium,Which property controls the order of flex items?,order property.
+Frontend,CSS,Medium,How do you center an absolutely positioned element both horizontally and vertically?,"position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);"
+Frontend,CSS,Medium,What is the difference between relative and sticky positioning with scroll?,"Sticky toggles between relative and fixed when reaching threshold, relative never fixes."
+Frontend,CSS,Medium,How do you select all elements with attribute starting with a certain value?,"[attr^=""value""]"
+Frontend,CSS,Medium,Write CSS to add a custom cursor icon.,"cursor: url('icon.png'), auto;"
+Frontend,CSS,Medium,What’s the difference between inline style and CSS variables in <style>?,"Inline style applies to single element, CSS variables can be reused globally."
+Frontend,CSS,Medium,Explain how the cascade works when multiple CSS rules apply.,"CSS applies rules by specificity, importance (!important), and source order."
+Frontend,CSS,Medium,How do you apply style only to empty elements?,:empty pseudo-class.
+Frontend,CSS,Medium,What is the difference between visibility: hidden and opacity: 0?,"visibility: hidden removes interaction, opacity: 0 keeps interaction."
+Frontend,CSS,Medium,Which CSS property defines flexible growth in flexbox?,flex-grow.
+Frontend,CSS,Medium,How do you prevent child elements from overflowing a flex container?,flex-wrap: wrap;.
+Frontend,CSS,Medium,Write CSS to select all links that open in a new tab.,"a[target=""_blank""] { ... }"
+Frontend,CSS,Medium,How do you ensure a background image covers the full element?,background-size: cover;.
+Frontend,CSS,Medium,Which property helps in smooth scrolling to anchors?,scroll-behavior: smooth;.
+Frontend,CSS,Hard,Explain the difference between absolute and relative units in responsive design.,Absolute units don’t scale; relative units adjust with viewport or parent.
+Frontend,CSS,Medium,How do you force hardware acceleration for smoother animations?,Use transform: translateZ(0);.
+Frontend,CSS,Medium,What is the difference between inline-flex and flex?,inline-flex behaves like inline but children are flex items; flex is block-level.
+Frontend,CSS,Hard,How does the browser render CSS from parsing to painting?,"It builds DOM + CSSOM, merges into render tree, computes layout, then paints pixels."
+Frontend,CSS,Hard,Explain reflow vs repaint in CSS.,Reflow recalculates positions/layout; repaint updates visuals without changing layout.
+Frontend,CSS,Hard,Which CSS properties trigger GPU acceleration?,"Transforms (translate, scale, rotate) and opacity are GPU-accelerated."
+Frontend,CSS,Hard,Why can will-change improve performance but also harm it?,"It hints the browser to optimize elements, but overuse consumes memory."
+Frontend,CSS,Hard,Differentiate between stacking context and z-index.,Stacking context is a hierarchy formed by certain properties; z-index works only within its context.
+Frontend,CSS,Hard,How do container queries differ from media queries?,"Media queries depend on viewport size, container queries depend on parent container size."
+Frontend,CSS,Hard,What is the difference between CSS Grid subgrid and normal grid?,Subgrid allows child elements to inherit parent’s grid tracks for alignment.
+Frontend,CSS,Hard,Explain the concept of Critical CSS.,"It’s the minimum CSS needed for above-the-fold content, loaded inline for faster rendering."
+Frontend,CSS,Hard,How do you implement CSS scoping without Shadow DOM?,"Using :where(), BEM naming, or scoping classes."
+Frontend,CSS,Hard,Why is @layer introduced in CSS?,To control cascade layers explicitly and manage conflicts in large codebases.
+Frontend,CSS,Hard,How does CSS contain property improve performance?,It isolates rendering of elements to reduce reflow/repaint costs.
+Frontend,CSS,Hard,Explain the difference between subpixel rendering and normal rendering.,Subpixel rendering uses fractions of pixels to improve sharpness on high-DPI screens.
+Frontend,CSS,Hard,Why should you avoid * { margin:0; padding:0; } resets in large projects?,It can cause unnecessary reflows and override needed defaults; better to use modern normalize.css.
+Frontend,CSS,Hard,How do you optimize animations for performance?,"Animate transform and opacity, avoid layout-affecting properties like width or top."
+Frontend,CSS,Hard,What is the difference between logical properties and physical properties in CSS?,"Logical adapt to writing modes (margin-inline), physical are fixed (margin-left)."
+Frontend,CSS,Hard,How do CSS custom properties differ from SASS variables at runtime?,"CSS vars are live, cascade, and can change dynamically; SASS vars are compile-time only."
+Frontend,CSS,Hard,Why is position: sticky sometimes not working?,It needs a scrollable ancestor and a defined top/left/right/bottom offset.
+Frontend,CSS,Hard,How do you handle specificity wars in large projects?,"Use cascade layers, utility classes, or naming conventions like BEM."
+Frontend,CSS,Hard,Explain difference between relative color syntax and traditional color functions.,"Relative color syntax (e.g., color-mix()) allows manipulation based on existing colors."
+Frontend,CSS,Hard,How does clip-path: path() differ from SVG clipping?,"clip-path applies CSS shapes, while SVG allows more complex paths and external references."
+Frontend,CSS,Hard,Why is CSS subgrid important for complex layouts?,It aligns nested elements with parent grid without duplicating track definitions.
+Frontend,CSS,Hard,What is the difference between :is() and :where()?,"Both group selectors, but :where() has zero specificity, :is() takes the highest specificity."
+Frontend,CSS,Hard,How does prefers-reduced-motion improve accessibility?,It respects user OS settings and disables motion-heavy animations.
+Frontend,CSS,Hard,Write CSS to support both dark mode and high-contrast users.,Use combined media queries: @media (prefers-color-scheme: dark) and (prefers-contrast: more).
+Frontend,CSS,Hard,Why should inline critical CSS be minimized?,Too much inline CSS blocks rendering and prevents caching.
+Frontend,CSS,Hard,Explain difference between absolute and fixed background attachment.,"Absolute scrolls with element, fixed stays relative to viewport."
+Frontend,CSS,Hard,What is the role of CSS Houdini?,"It exposes low-level APIs to extend CSS, letting developers define custom styles."
+Frontend,CSS,Hard,How do you implement masonry layout without JS?,Use grid-template-rows: masonry; (experimental) or CSS multi-columns.
+Frontend,CSS,Hard,Why is object-fit: cover; useful in responsive images?,"It ensures the image fills container while preserving aspect ratio, cropping if needed."
+Frontend,CSS,Hard,How does browser handle conflicting CSS transitions and animations?,Animation overrides transition on the same property unless explicitly managed.
+Frontend,CSS,Hard,Differentiate between shadow DOM styles and global CSS.,"Shadow DOM encapsulates styles, preventing leakage in or out."
+Frontend,CSS,Hard,Why is it better to use CSS logical properties in multilingual sites?,"They adapt automatically to writing modes (LTR, RTL, vertical)."
+Frontend,CSS,Hard,How do painting and compositing affect CSS performance?,"Painting draws pixels, compositing layers them; fewer layers = better performance."
+Frontend,CSS,Hard,Why is grid-template-areas useful in design systems?,"It creates semantic, maintainable layouts with named regions."
+Frontend,CSS,Hard,How do you optimize large background images in CSS?,"Use responsive srcset, lazy loading, compression, and background-size: cover."
+Frontend,CSS,Hard,What’s the difference between @supports and polyfills?,@supports checks browser feature availability; polyfills add missing functionality.
+Frontend,CSS,Hard,"Explain difference between CSS Cascade Order, Inheritance, and Specificity.","Cascade resolves conflicts, inheritance passes styles down, specificity prioritizes selectors."
+Frontend,CSS,Hard,How does CSS accent-color improve form styling?,It lets browsers colorize form controls consistently without heavy overrides.
+Frontend,CSS,Hard,What’s the difference between static and custom properties in performance terms?,"Static are resolved once, custom properties are dynamic and evaluated at runtime."
+Frontend,CSS,Hard,How do layers affect performance when using z-index and transforms?,New stacking contexts increase memory usage but improve isolation.
+Frontend,CSS,Hard,Explain the difference between CSS counters and generated content.,Counters track numbers dynamically; generated content inserts extra text/icons.
+Frontend,CSS,Hard,Why can excessive box-shadow slow rendering?,Each shadow increases paint complexity and GPU work.
+Frontend,CSS,Hard,How does browser decide between hardware and software rendering for CSS?,"Based on property type: transforms/opacity → GPU, layout/paint-heavy → CPU."
+Frontend,CSS,Hard,Why use object-view-box in modern CSS?,To crop/reposition replaced elements (like images/videos) within their container.
+Frontend,CSS,Hard,How does backdrop-filter differ from filter?,"backdrop-filter applies effect on background behind element, filter applies to element itself."
+Frontend,CSS,Hard,What is the difference between CSS Layers and z-index stacking?,"Layers control cascade order, z-index controls visual stacking."
+Frontend,CSS,Hard,Why is container query inline-size more powerful than media query width?,"It adapts based on parent container, not entire viewport, making components reusable."
+Frontend,CSS,Hard,Explain the difference between CSS cascade layers and !important.,Layers control structured priority; !important force overrides at rule level.
+Frontend,CSS,Hard,What is the difference between scroll snapping and normal scrolling?,"Scroll snapping locks scroll to positions (scroll-snap-type), normal scroll is free."
+Frontend,CSS,Hard,Why can @keyframes animations affect accessibility?,Continuous animations may cause motion sickness; reduced motion should be respected.
+Frontend,React.js,Easy,What is React.js?,"A JavaScript library for building user interfaces, developed by Facebook."
+Frontend,React.js,Easy,Why do we use React instead of plain JavaScript?,React makes UI development easier with reusable components and efficient updates via Virtual DOM.
+Frontend,React.js,Easy,What is JSX in React?,JSX is a syntax extension that lets you write HTML-like code inside JavaScript.
+Frontend,React.js,Easy,Can a React component return multiple elements?,"Yes, by wrapping them in a parent element like <div> or <> (React Fragment)."
+Frontend,React.js,Easy,What are React components?,"Independent, reusable pieces of UI that can be functional or class-based."
+Frontend,React.js,Easy,Differentiate between functional and class components.,Functional use functions and hooks; class use ES6 classes and lifecycle methods.
+Frontend,React.js,Easy,What is the Virtual DOM?,A lightweight copy of the real DOM that React updates efficiently.
+Frontend,React.js,Easy,How does React update the UI efficiently?,By comparing Virtual DOM with previous state (diffing) and applying only necessary changes.
+Frontend,React.js,Easy,What is a React Fragment?,A wrapper <>...</> that lets you return multiple elements without adding extra nodes.
+Frontend,React.js,Easy,How do you create a React app quickly?,Using create-react-app or modern tools like Vite.
+Frontend,React.js,Easy,What is the difference between props and state?,"Props are external, passed to components; state is internal, managed inside a component."
+Frontend,React.js,Easy,Can props be changed inside a component?,"No, props are read-only."
+Frontend,React.js,Easy,How do you define state in a functional component?,Using the useState hook.
+Frontend,React.js,Easy,Write code to initialize state with useState.,"const [count, setCount] = useState(0);"
+Frontend,React.js,Easy,What is the purpose of setState in React?,To update component state and re-render the UI.
+Frontend,React.js,Easy,How do you pass data from parent to child in React?,"By passing props: <Child name=""John"" />."
+Frontend,React.js,Easy,How do you handle events in React?,By using camelCase event handlers like onClick={handleClick}.
+Frontend,React.js,Easy,What is conditional rendering in React?,"Showing different UI based on conditions, often using ternary operator or &&."
+Frontend,React.js,Easy,How do you render a list in React?,Using JavaScript .map() function with JSX.
+Frontend,React.js,Easy,Why do we need key when rendering lists in React?,To help React identify and efficiently update list items.
+Frontend,React.js,Easy,What is the default value of key in React if not provided?,"The index of the array, though it’s not recommended."
+Frontend,React.js,Easy,How do you apply inline styles in React?,"By using objects: <div style={{ color: ""red"" }}>Hello</div>."
+Frontend,React.js,Easy,What is a controlled component in React forms?,A form input whose value is controlled by React state.
+Frontend,React.js,Easy,How do you handle form inputs in React?,By binding value to state and updating state on onChange.
+Frontend,React.js,Easy,What is the difference between controlled and uncontrolled components?,Controlled components use state; uncontrolled rely on ref and the DOM.
+Frontend,React.js,Easy,What is React Router used for?,For navigation between pages/components in single-page applications (SPA).
+Frontend,React.js,Easy,How do you install React Router?,npm install react-router-dom.
+Frontend,React.js,Easy,How do you redirect a user in React Router?,"By using <Navigate to=""/path"" />."
+Frontend,React.js,Easy,What is the difference between <Link> and <a> in React Router?,"<Link> prevents page reload (SPA navigation), <a> reloads the page."
+Frontend,React.js,Easy,How do you use conditional CSS classes in React?,By using template literals or libraries like classnames.
+Frontend,React.js,Easy,What is React Hook?,Special functions that let you use state and lifecycle in functional components.
+Frontend,React.js,Easy,Name some commonly used hooks.,"useState, useEffect, useContext, useRef."
+Frontend,React.js,Easy,How does useEffect work?,"It runs side effects after rendering, like fetching data or updating DOM."
+Frontend,React.js,Easy,When does useEffect run without dependencies?,After every render.
+Frontend,React.js,Easy,When does useEffect run with an empty dependency array []?,"Only once, after the initial render."
+Frontend,React.js,Easy,What is the purpose of useRef hook?,To access or store values without causing re-renders (like DOM elements).
+Frontend,React.js,Easy,How do you handle default props in React?,By assigning Component.defaultProps = { ... }.
+Frontend,React.js,Easy,What is prop drilling in React?,Passing props through multiple levels of components unnecessarily.
+Frontend,React.js,Easy,How can prop drilling be avoided?,Using Context API or state management libraries.
+Frontend,React.js,Easy,What is Context API in React?,A way to share state globally without prop drilling.
+Frontend,React.js,Easy,How do you create Context in React?,Using const MyContext = React.createContext();.
+Frontend,React.js,Easy,How do you consume Context in a functional component?,Using useContext(MyContext).
+Frontend,React.js,Easy,What is the difference between React and Angular?,"React is a library for UI, Angular is a full-fledged framework."
+Frontend,React.js,Easy,What is the difference between React and Vue?,"React uses JSX and virtual DOM, Vue uses templates and has built-in reactivity."
+Frontend,React.js,Easy,What is the use of React.StrictMode?,"It highlights potential problems during development, doesn’t affect production."
+Frontend,React.js,Easy,Can you write React without JSX?,"Yes, by using React.createElement(), though JSX is preferred."
+Frontend,React.js,Easy,What is the difference between npm start and npm build?,"start runs dev server, build creates optimized production files."
+Frontend,React.js,Easy,How do you comment inside JSX?,{/* This is a comment */}.
+Frontend,React.js,Easy,What is the use of export default in React components?,It allows importing the component without curly braces.
+Frontend,React.js,Easy,How do you import a component in React?,"import MyComponent from ""./MyComponent"";."
+Frontend,React.js,Medium,How does the virtual DOM help improve performance in React?,It minimizes direct DOM updates by comparing changes in a virtual copy and applying only the necessary updates.
+Frontend,React.js,Medium,Explain the purpose of keys in React lists.,"Keys help React identify which items changed, added, or removed to optimize rendering."
+Frontend,React.js,Medium,Can you describe how controlled and uncontrolled components differ?,"Controlled components rely on React state for their values, while uncontrolled components use the DOM’s own state via refs."
+Frontend,React.js,Medium,How do you pass data from a parent to a child component?,"By using props, which allow values to be passed down."
+Frontend,React.js,Medium,In what scenario would you prefer React.Fragment over a div wrapper?,When you want to group multiple elements without adding extra nodes to the DOM.
+Frontend,React.js,Medium,How can you prevent unnecessary re-renders in React components?,"By using React.memo, shouldComponentUpdate, or optimizing props/state usage."
+Frontend,React.js,Medium,What happens if you update state directly without using setState/useState?,React won’t re-render properly because state updates must go through the provided updater functions.
+Frontend,React.js,Medium,Why is lifting state up important in React?,"It allows shared state between components, preventing data duplication and ensuring consistency."
+Frontend,React.js,Medium,What are synthetic events in React?,React’s wrapper around browser events that work consistently across all browsers.
+Frontend,React.js,Medium,How does React batch state updates?,React groups multiple state updates into a single re-render for performance optimization.
+Frontend,React.js,Medium,What’s the significance of defaultProps in React?,It defines default values for props when no value is provided.
+Frontend,React.js,Medium,How do you handle form submissions in React?,By attaching an onSubmit handler and preventing default behavior using event.preventDefault().
+Frontend,React.js,Medium,Why should array indices not be used as keys?,Because it can lead to inefficient re-renders and bugs when items are reordered or removed.
+Frontend,React.js,Medium,How does React distinguish between class and functional components during rendering?,"Class components extend React.Component, while functional ones are just functions returning JSX."
+Frontend,React.js,Medium,Can you explain the role of prop drilling?,Passing props through multiple layers of components unnecessarily to reach a deeply nested child.
+Frontend,React.js,Medium,What is the benefit of using PropTypes?,"It validates the type of props, helping catch bugs and improve documentation."
+Frontend,React.js,Medium,When does React re-render a component?,When its state or props change.
+Frontend,React.js,Medium,What is the difference between mounting and unmounting in React?,"Mounting is inserting the component into the DOM, unmounting is removing it."
+Frontend,React.js,Medium,What is reconciliation in React?,The process React uses to update the DOM by comparing the virtual DOM with the previous version.
+Frontend,React.js,Medium,What are higher-order components (HOCs)?,Functions that take a component as input and return a new component with added behavior.
+Frontend,React.js,Medium,Can you describe how React handles conditional rendering?,"It uses JavaScript expressions like if statements, ternary operators, or logical && inside JSX."
+Frontend,React.js,Medium,What’s the difference between inline CSS and CSS modules in React?,"Inline CSS is applied directly to elements, while CSS modules scope styles to specific components."
+Frontend,React.js,Medium,How can you ensure props passed to a component are required?,By using PropTypes with .isRequired.
+Frontend,React.js,Medium,Why do React functional components sometimes re-render unnecessarily?,"Because parent components pass new references for props, even if the values are the same."
+Frontend,React.js,Medium,What’s the difference between pure components and regular components?,Pure components implement shallow comparison of props/state to avoid re-renders.
+Frontend,React.js,Medium,How do you pass functions as props?,By defining a function in the parent and sending it as a prop to the child.
+Frontend,React.js,Medium,What’s the purpose of React.StrictMode?,To highlight potential problems by running checks during development.
+Frontend,React.js,Medium,How do default values work with useState?,The initial value is set only during the first render.
+Frontend,React.js,Medium,Why might you use a key that never changes for a list item?,To avoid losing component state during re-renders.
+Frontend,React.js,Medium,How does context API reduce prop drilling?,It allows data to be shared globally without manually passing props down each level.
+Frontend,React.js,Medium,Why is JSX considered syntactic sugar?,Because it is a shorthand for calling React.createElement().
+Frontend,React.js,Medium,What is event delegation in React?,React attaches one event handler at the root and uses delegation for child events.
+Frontend,React.js,Medium,How can you make a component reusable?,"By keeping it generic, parameterized with props, and avoiding hardcoded logic."
+Frontend,React.js,Medium,What is the difference between state and props mutability?,"State is mutable (managed within a component), while props are immutable (read-only from parent)."
+Frontend,React.js,Medium,What’s the difference between export default and named export in React components?,"Default export allows importing with any name, named export requires exact import names."
+Frontend,React.js,Medium,How does React identify which DOM changes to make after state updates?,Through the diffing algorithm and reconciliation.
+Frontend,React.js,Medium,How can you conditionally add a class in React?,By using JavaScript expressions like template literals or libraries such as classnames.
+Frontend,React.js,Medium,How do you avoid binding functions inside render in class components?,By binding in the constructor or using arrow functions.
+Frontend,React.js,Medium,What does it mean when React components are declarative?,"You describe the UI state, and React takes care of rendering the actual DOM updates."
+Frontend,React.js,Medium,What is composition in React?,Building complex UIs by combining smaller components together.
+Frontend,React.js,Medium,How do you handle default behavior for props in functional components?,By setting default function arguments or using defaultProps.
+Frontend,React.js,Medium,What’s the difference between useRef and state for storing values?,"useRef doesn’t trigger re-renders when updated, while state does."
+Frontend,React.js,Medium,Why is immutability important in React state management?,It ensures predictable re-renders and makes state updates easier to track.
+Frontend,React.js,Medium,What are render props in React?,A pattern where a component takes a function as a prop to control what it renders.
+Frontend,React.js,Medium,What happens if two components share the same state variable incorrectly?,They might behave inconsistently or override each other’s data.
+Frontend,React.js,Medium,What is the significance of displayName in React components?,It helps with debugging by naming components in DevTools or HOCs.
+Frontend,React.js,Medium,How do you handle optional props in React?,By providing default values or checking with conditional rendering.
+Frontend,React.js,Medium,Why is it recommended to avoid anonymous functions in JSX sometimes?,"They create new function references on every render, possibly causing re-renders."
+Frontend,React.js,Medium,Can React render arrays directly?,"Yes, by returning an array of elements with keys from a component."
+Frontend,React.js,Medium,How can you improve performance of a large list in React?,By using windowing libraries like react-window or react-virtualized.
+Frontend,React.js,Hard,How does React Fiber architecture differ from the old stack reconciler?,"Fiber breaks rendering into small units of work, enabling interruption and prioritization, unlike the old synchronous stack-based reconciler."
+Frontend,React.js,Hard,What problem does React’s concurrent rendering solve?,"It allows React to interrupt rendering tasks, prioritize urgent updates, and keep UIs responsive."
+Frontend,React.js,Hard,How does React determine the priority of updates in concurrent mode?,React assigns lanes (priorities) to updates and processes them based on urgency.
+Frontend,React.js,Hard,Explain how Suspense works under the hood.,"Suspense pauses rendering until a resource (like data or code) is ready, showing a fallback in the meantime."
+Frontend,React.js,Hard,What role does the scheduler play in React Fiber?,It manages task queues and prioritizes rendering work efficiently.
+Frontend,React.js,Hard,How is useTransition different from a normal state update?,"It marks updates as non-urgent, letting urgent updates like typing happen without delay."
+Frontend,React.js,Hard,How does React’s diffing algorithm optimize reconciliation?,"It assumes elements of the same type stay stable, compares keys, and reuses unchanged components."
+Frontend,React.js,Hard,What is React.lazy and how does it differ from dynamic imports?,"React.lazy loads components on demand with Suspense support, while dynamic imports return a promise directly."
+Frontend,React.js,Hard,"How can you implement error boundaries, and why are they important?","By creating a class component with componentDidCatch and getDerivedStateFromError, they catch runtime errors in children."
+Frontend,React.js,Hard,What is hydration in React?,The process of attaching event listeners and making server-rendered HTML interactive on the client.
+Frontend,React.js,Hard,How does React handle memory leaks with event listeners or intervals?,Developers must clean them up in useEffect cleanup functions or lifecycle methods.
+Frontend,React.js,Hard,What are React portals and when would you use them?,"They allow rendering children into a DOM node outside the parent hierarchy, useful for modals, tooltips, etc."
+Frontend,React.js,Hard,How do you handle race conditions in async data fetching inside React components?,By canceling outdated requests or using libraries like React Query that handle stale data.
+Frontend,React.js,Hard,How does useDeferredValue improve performance in React 18?,It delays non-urgent updates so that urgent ones (like typing) render instantly.
+Frontend,React.js,Hard,What are controlled concurrency features in React 18?,"Features like automatic batching, transitions, and deferred values that optimize rendering."
+Frontend,React.js,Hard,How do hooks avoid creating closures that capture stale values?,By using dependency arrays in useEffect and useCallback to update closures.
+Frontend,React.js,Hard,Why must custom hooks always follow the rules of hooks?,To ensure React can track hook calls consistently and not break the hooks order.
+Frontend,React.js,Hard,How would you implement a custom hook for debouncing input?,"Use useState, useEffect, and setTimeout to delay state updates until typing stops."
+Frontend,React.js,Hard,Can you explain the difference between static site generation and server-side rendering in React frameworks?,"SSG builds pages at compile time, SSR builds them at request time."
+Frontend,React.js,Hard,How can React Suspense be combined with streaming SSR?,"By streaming parts of UI progressively as data resolves, improving perceived performance."
+Frontend,React.js,Hard,Why is context API sometimes considered an anti-pattern?,Because excessive use can cause unnecessary re-renders and tightly coupled components.
+Frontend,React.js,Hard,How do you debug React performance bottlenecks?,By using React DevTools Profiler to check rendering times and optimize slow components.
+Frontend,React.js,Hard,How does React ensure backward compatibility with class components?,Fiber supports both class and function components in its reconciliation model.
+Frontend,React.js,Hard,How would you optimize a React app with thousands of DOM nodes?,"Techniques include virtualization, memoization, lazy loading, and splitting large trees."
+Frontend,React.js,Hard,How does useCallback differ from useMemo in behavior?,"useCallback memoizes a function, while useMemo memoizes a computed value."
+Frontend,React.js,Hard,"What is React’s batching mechanism, and how did React 18 improve it?","React batches multiple state updates into one render; React 18 batches across promises, timeouts, and events."
+Frontend,React.js,Hard,How do you implement infinite scrolling in React efficiently?,By using IntersectionObserver or virtualization libraries like react-window.
+Frontend,React.js,Hard,Why is server-side rendering beneficial for SEO in React apps?,It ensures search engines can index HTML directly without waiting for JS execution.
+Frontend,React.js,Hard,How do you prevent excessive prop drilling without using context API?,"By using composition patterns, render props, or state management libraries."
+Frontend,React.js,Hard,How does React reconcile lists with duplicate keys?,"It reuses components incorrectly, leading to bugs, hence unique keys are required."
+Frontend,React.js,Hard,How does tree-shaking work with React applications?,Tools like Webpack remove unused imports during build to reduce bundle size.
+Frontend,React.js,Hard,What is the difference between a React render phase and commit phase?,"Render phase computes changes (can be paused), commit phase applies changes to the DOM (synchronous)."
+Frontend,React.js,Hard,How does React differentiate between mount and update inside useEffect?,By checking dependency arrays; an empty array runs only on mount.
+Frontend,React.js,Hard,What are the pitfalls of using React’s Context for global state management?,It can cause performance issues due to re-renders and lacks advanced features like middleware.
+Frontend,React.js,Hard,How do you implement optimistic UI updates in React?,"Update UI immediately before confirming success from server, then rollback if failed."
+Frontend,React.js,Hard,What is the significance of immutable state in React updates?,It allows React to detect changes via shallow comparison efficiently.
+Frontend,React.js,Hard,How does React detect changes in nested objects when using useState?,It doesn’t deep compare; developers must provide new object references.
+Frontend,React.js,Hard,How would you build a plugin system in React?,"By using render props, higher-order components, or context-driven component injection."
+Frontend,React.js,Hard,Why does React encourage unidirectional data flow over two-way binding?,It makes data flow predictable and debugging easier.
+Frontend,React.js,Hard,What is suspense for data fetching and how does it differ from existing solutions?,"Suspense lets components wait for async data, while libraries like fetch need manual loading states."
+Frontend,React.js,Hard,What is React’s “render as you fetch” pattern?,"Fetching data before rendering a component, often used with Suspense for better performance."
+Frontend,React.js,Hard,How does React handle concurrent updates from different components?,It schedules them into lanes and reconciles them without blocking.
+Frontend,React.js,Hard,How can code-splitting affect React app performance?,It reduces initial load time by splitting code into smaller bundles loaded on demand.
+Frontend,React.js,Hard,What is hydration mismatch and how can you fix it?,A difference between server-rendered HTML and client-rendered output; fix by consistent rendering logic.
+Frontend,React.js,Hard,How do React hooks internally keep track of multiple useState calls?,By storing hooks in a linked list aligned with component call order.
+Frontend,React.js,Hard,What challenges arise when testing React components with async hooks?,"Handling state updates, mocking fetch calls, and waiting for re-renders properly."
+Frontend,React.js,Hard,Why is React considered a library and not a full framework?,"It focuses only on UI rendering, relying on other tools for routing, state, and SSR."
+Frontend,React.js,Hard,How can you implement a micro-frontend architecture using React?,By splitting the UI into smaller independently deployed React apps integrated together.
+Frontend,React.js,Hard,What are Suspense boundaries and how do they improve user experience?,They define regions of UI that can independently show fallback content while waiting for data.
+Frontend,React.js,Hard,How does React handle priority for user-blocking vs non-blocking updates?,"User-blocking updates like input typing are rendered first, while non-blocking ones are deferred."
+Frontend,React Native,Easy,What is React Native?,A framework for building mobile apps using JavaScript and React.
+Frontend,React Native,Easy,Who developed React Native?,Facebook (Meta).
+Frontend,React Native,Easy,Fill in the blank: React Native is used to build ______ applications.,Mobile (iOS and Android).
+Frontend,React Native,Easy,True/False: React Native uses WebView to render apps.,False (it uses native components).
+Frontend,React Native,Easy,Which programming language is mainly used in React Native?,JavaScript.
+Frontend,React Native,Easy,What is the difference between React and React Native?,"React is for web apps, React Native is for mobile apps."
+Frontend,React Native,Easy,How do you start a new React Native project?,Using npx react-native init ProjectName.
+Frontend,React Native,Easy,Which command runs a React Native app on Android emulator?,npx react-native run-android.
+Frontend,React Native,Easy,Scenario: You want to test your React Native app on iOS. Which command do you use?,npx react-native run-ios.
+Frontend,React Native,Easy,What is the purpose of Metro bundler in React Native?,It bundles and serves JavaScript code to the app.
+Frontend,React Native,Easy,Which tag is the root component in React Native apps?,<App />.
+Frontend,React Native,Easy,True/False: React Native supports hot reloading.,True.
+Frontend,React Native,Easy,What is the default entry file for a React Native project?,index.js.
+Frontend,React Native,Easy,Fill in the blank: React Native uses ______ for styling.,JavaScript objects (StyleSheet).
+Frontend,React Native,Easy,Which component is used to display text in React Native?,<Text>.
+Frontend,React Native,Easy,Which component is used to create buttons?,<Button> or <TouchableOpacity>.
+Frontend,React Native,Easy,What is the difference between <View> and <Text> in React Native?,"<View> is a container, <Text> is for displaying text."
+Frontend,React Native,Easy,Which component is similar to <div> in React?,<View>.
+Frontend,React Native,Easy,How do you apply inline styling in React Native?,By passing a style object directly to style prop.
+Frontend,React Native,Easy,What is the use of StyleSheet.create()?,It organizes and optimizes styles in React Native.
+Frontend,React Native,Easy,Which component is used for scrolling content?,<ScrollView>.
+Frontend,React Native,Easy,What is the difference between <ScrollView> and <FlatList>?,<ScrollView> loads all items; <FlatList> renders items lazily.
+Frontend,React Native,Easy,Scenario: You want to render a list of items efficiently. Which component do you use?,<FlatList>.
+Frontend,React Native,Easy,Which React Native component is used for handling user input?,<TextInput>.
+Frontend,React Native,Easy,"Fill in the blank: In React Native, images are displayed using the ______ component.",<Image>.
+Frontend,React Native,Easy,How do you handle button press events in React Native?,Using onPress prop.
+Frontend,React Native,Easy,Which navigation library is most commonly used in React Native?,React Navigation.
+Frontend,React Native,Easy,True/False: React Native can access device APIs like camera and GPS.,True.
+Frontend,React Native,Easy,Which tool is used to debug React Native apps?,React Native Debugger or Flipper.
+Frontend,React Native,Easy,What is the difference between Expo and React Native CLI?,Expo is an SDK for quick development; CLI gives more native control.
+Frontend,React Native,Easy,Which command is used to install a package in React Native?,npm install or yarn add.
+Frontend,React Native,Easy,Fill in the blank: React Native bridges ______ and native code.,JavaScript.
+Frontend,React Native,Easy,How do you display a loading spinner in React Native?,Using <ActivityIndicator>.
+Frontend,React Native,Easy,What does the TouchableOpacity component do?,Provides a pressable button with fade effect.
+Frontend,React Native,Easy,Which hook is commonly used in React Native functional components?,useState and useEffect.
+Frontend,React Native,Easy,True/False: React Native apps can be published to both Google Play Store and Apple App Store.,True.
+Frontend,React Native,Easy,How do you import components from React Native?,"import { Text, View } from 'react-native';."
+Frontend,React Native,Easy,What is the default port used by Metro bundler?,Port 8081.
+Frontend,React Native,Easy,Which file stores the app’s name and entry point?,app.json.
+Frontend,React Native,Easy,Scenario: You want to navigate between two screens. Which React Native concept do you use?,Navigation (React Navigation library).
+Frontend,React Native,Easy,Fill in the blank: The command to start Metro bundler is npx react-native ______.,start.
+Frontend,React Native,Easy,Which platform-specific file is generated for Android builds?,.apk or .aab.
+Frontend,React Native,Easy,Which platform-specific file is generated for iOS builds?,.ipa.
+Frontend,React Native,Easy,What is the use of Platform module in React Native?,To check if app is running on iOS or Android.
+Frontend,React Native,Easy,True/False: React Native supports reusable components.,True.
+Frontend,React Native,Easy,Which file is used to configure dependencies in React Native?,package.json.
+Frontend,React Native,Easy,What is the purpose of SafeAreaView?,Ensures content is rendered within safe display boundaries.
+Frontend,React Native,Easy,How do you refresh the React Native app manually on device?,Shake the device → select reload.
+Frontend,React Native,Easy,What is the use of useEffect hook in React Native?,To perform side effects like fetching data or setting up listeners.
+Frontend,React Native,Easy,How do you add icons in React Native?,By using react-native-vector-icons or other icon libraries.
+Frontend,React Native,Medium,What is the difference between controlled and uncontrolled components in React Native?,"Controlled components rely on React state, uncontrolled components maintain their own state internally."
+Frontend,React Native,Medium,How does React Native handle styling compared to CSS in web development?,It uses JavaScript objects with limited CSS-like properties instead of full CSS.
+Frontend,React Native,Medium,Scenario: You want to persist data locally even after the app restarts. Which library would you use?,AsyncStorage or libraries like MMKV.
+Frontend,React Native,Medium,Fill in the blank: useEffect runs after ______.,Every render (or when dependencies change).
+Frontend,React Native,Medium,What is the difference between useState and useReducer in React Native?,"useState is for simple state, useReducer is for complex state logic."
+Frontend,React Native,Medium,True/False: React Native can directly use all React web libraries without modification.,False.
+Frontend,React Native,Medium,What is the purpose of Flexbox in React Native?,"To create responsive layouts using properties like flexDirection, justifyContent, and alignItems."
+Frontend,React Native,Medium,How do you detect the platform (iOS or Android) in React Native?,Using the Platform module (Platform.OS).
+Frontend,React Native,Medium,Which lifecycle methods in class components correspond to useEffect in functional components?,"componentDidMount, componentDidUpdate, and componentWillUnmount."
+Frontend,React Native,Medium,Scenario: You need to show different UI for Android and iOS. How can you do this?,"Use Platform.OS conditionals or create platform-specific files (.ios.js, .android.js)."
+Frontend,React Native,Medium,What is the difference between ScrollView and FlatList?,"ScrollView renders all items at once, FlatList renders items lazily for better performance."
+Frontend,React Native,Medium,What does the keyExtractor prop in FlatList do?,It defines a unique key for each item to help React identify list items.
+Frontend,React Native,Medium,Fill in the blank: TouchableOpacity and TouchableHighlight are examples of ______ components.,Touchable/Pressable.
+Frontend,React Native,Medium,What is the purpose of SectionList in React Native?,To render grouped lists with section headers.
+Frontend,React Native,Medium,Scenario: You want to animate a button press. Which API would you use?,Animated API or Reanimated.
+Frontend,React Native,Medium,What is the difference between controlled TextInput and uncontrolled TextInput?,"Controlled uses state to manage value, uncontrolled lets the input manage its own value."
+Frontend,React Native,Medium,How can you optimize the performance of a React Native list?,"Use FlatList with keyExtractor, getItemLayout, initialNumToRender, and memoization."
+Frontend,React Native,Medium,True/False: React Native provides built-in gesture handling.,False (needs libraries like react-native-gesture-handler).
+Frontend,React Native,Medium,Which navigation types are supported by React Navigation?,"Stack, Drawer, Bottom Tab, Top Tab navigation."
+Frontend,React Native,Medium,Scenario: You want to navigate back to the previous screen. Which method do you call?,navigation.goBack().
+Frontend,React Native,Medium,What is the purpose of SafeAreaView?,Ensures UI elements are rendered within device safe areas (not under notches or status bars).
+Frontend,React Native,Medium,Fill in the blank: Modal component in React Native is used to display ______.,Content above the current screen.
+Frontend,React Native,Medium,How do you debug a React Native app running on a physical device?,"Using Flipper, React Native Debugger, or remote debugging with Chrome."
+Frontend,React Native,Medium,What is the difference between synchronous and asynchronous storage in React Native?,"Synchronous blocks execution, asynchronous runs in the background without blocking."
+Frontend,React Native,Medium,"Which React Native component allows detecting gestures like pan, pinch, and swipe?",Gesture Handler (react-native-gesture-handler).
+Frontend,React Native,Medium,True/False: React Native supports TypeScript.,True.
+Frontend,React Native,Medium,Scenario: You want to share data between deeply nested components without prop drilling. Which feature do you use?,React Context API.
+Frontend,React Native,Medium,What is the difference between useContext and useReducer?,"useContext provides global state access, useReducer manages complex state transitions."
+Frontend,React Native,Medium,Fill in the blank: React Native bridges ______ and native APIs.,JavaScript.
+Frontend,React Native,Medium,Which tool is used for profiling performance in React Native apps?,Flipper or React Native Performance Monitor.
+Frontend,React Native,Medium,How does React Native achieve native-like performance?,By bridging JavaScript code to native components instead of using WebView.
+Frontend,React Native,Medium,Scenario: Your app has slow re-rendering. What can you do?,"Use React.memo, avoid unnecessary state updates, optimize FlatLists."
+Frontend,React Native,Medium,What is the difference between Expo and bare React Native CLI?,"Expo simplifies setup with managed workflow, CLI gives full native control."
+Frontend,React Native,Medium,True/False: Expo apps can use any custom native modules without ejecting.,False.
+Frontend,React Native,Medium,What is the purpose of Linking API in React Native?,To handle deep linking and open URLs from apps.
+Frontend,React Native,Medium,Which hook replaces componentWillUnmount in functional components?,Cleanup function inside useEffect.
+Frontend,React Native,Medium,"Fill in the blank: In React Native, all components must return ______.",A single root element.
+Frontend,React Native,Medium,Scenario: You need to check if the device is online or offline. Which API do you use?,NetInfo API (@react-native-community/netinfo).
+Frontend,React Native,Medium,What is the difference between useCallback and useMemo?,"useCallback memoizes functions, useMemo memoizes computed values."
+Frontend,React Native,Medium,Which React Native module is used to access device camera and gallery?,react-native-image-picker or Expo Image Picker.
+Frontend,React Native,Medium,What is the difference between synchronous and asynchronous animations in React Native?,"Synchronous run instantly, asynchronous are scheduled and run smoothly over time."
+Frontend,React Native,Medium,Fill in the blank: React Native components communicate with native code via ______.,The JavaScript bridge.
+Frontend,React Native,Medium,Scenario: Your app crashes only on iOS. How do you debug it?,"Use Xcode logs, Flipper, and check native modules for issues."
+Frontend,React Native,Medium,What is the difference between shallow and deep linking in React Native?,"Shallow links open the app, deep links open specific screens inside the app."
+Frontend,React Native,Medium,True/False: React Native allows background tasks like location tracking.,True (with background task libraries or native modules).
+Frontend,React Native,Medium,What is the purpose of useRef in React Native?,To persist values or directly access DOM/native elements without re-rendering.
+Frontend,React Native,Medium,How do you create custom hooks in React Native?,By writing a function starting with use that uses React hooks internally.
+Frontend,React Native,Medium,Which hook helps to improve performance when passing functions as props?,useCallback.
+Frontend,React Native,Medium,Fill in the blank: A React Native project uses ______ for dependency management.,npm or yarn.
+Frontend,React Native,Medium,What is the difference between synchronous logs and async logs in React Native debugging?,"Sync logs show immediately, async logs may be batched and delayed."
+Frontend,React Native,Hard,Explain how the React Native bridge works in detail.,It enables communication between JavaScript and native code asynchronously by serializing messages across a bridge.
+Frontend,React Native,Hard,Scenario: Your React Native app has performance bottlenecks due to frequent re-renders. How would you debug and fix this?,"Use React DevTools Profiler, enable Performance Monitor, optimize with React.memo, useCallback, useMemo, and reduce prop drilling."
+Frontend,React Native,Hard,What is the Hermes engine in React Native?,An open-source JavaScript engine optimized for React Native to improve performance and startup time.
+Frontend,React Native,Hard,Fill in the blank: Hermes reduces app size by ______ and improves ______.,Reducing bytecode size and improving startup performance.
+Frontend,React Native,Hard,How do you implement deep linking in React Native?,Configure Linking API or use React Navigation with URL prefixes and native configuration.
+Frontend,React Native,Hard,Scenario: You want to share data between React Native and native Android code. How do you achieve this?,Write a native module in Java/Kotlin and expose it to JavaScript via the bridge.
+Frontend,React Native,Hard,What is the difference between Fabric and the old React Native architecture?,"Fabric uses a new concurrent rendering system with JSI (JavaScript Interface), replacing the asynchronous bridge."
+Frontend,React Native,Hard,True/False: React Native’s new architecture (Fabric + TurboModules + JSI) eliminates the bridge.,True.
+Frontend,React Native,Hard,Explain TurboModules in React Native.,A new way to load native modules lazily using JSI for faster performance and reduced memory usage.
+Frontend,React Native,Hard,What are concurrent features in React Native?,"Features powered by React 18 like concurrent rendering, Suspense, and streaming SSR (in web + RN web)."
+Frontend,React Native,Hard,Scenario: Your animations are janky. Which library and technique would you use for 60fps animations?,"Use Reanimated 2 or Moti, which run animations on the UI thread."
+Frontend,React Native,Hard,What is the difference between Animated API and Reanimated?,"Animated runs on JS thread, Reanimated runs on UI thread for smoother performance."
+Frontend,React Native,Hard,"Fill in the blank: In production, React Native apps should disable ______ mode.",Remote Debugging / Development Mode.
+Frontend,React Native,Hard,How do you handle memory leaks in React Native?,"Remove unused listeners, cancel timers, clean up in useEffect, use Flipper memory profiler."
+Frontend,React Native,Hard,Scenario: You need offline-first support with data sync in React Native. Which tools would you use?,"Realm, WatermelonDB, or SQLite for offline storage with sync support."
+Frontend,React Native,Hard,What is the difference between synchronous and asynchronous communication in the React Native bridge?,"Synchronous blocks JS thread, asynchronous sends messages without blocking."
+Frontend,React Native,Hard,Explain how CodePush works with React Native.,It enables OTA (over-the-air) updates by pushing JS bundle updates directly to devices without app store submission.
+Frontend,React Native,Hard,True/False: CodePush can update native dependencies without a new app store release.,False.
+Frontend,React Native,Hard,Scenario: You need to integrate a custom native iOS SDK into your React Native app. How would you do it?,"Create a native module in Swift/Objective-C, expose methods to JS, and use it via NativeModules."
+Frontend,React Native,Hard,What is the role of Flipper in React Native development?,"It provides debugging tools for logs, network, performance, and React DevTools integration."
+Frontend,React Native,Hard,Fill in the blank: React Native’s architecture is moving from a bridge-based model to ______.,JSI (JavaScript Interface).
+Frontend,React Native,Hard,What is the difference between state persistence in Redux and Context API in React Native apps?,Redux provides centralized global state with persistence libraries; Context is simpler but less scalable for large apps.
+Frontend,React Native,Hard,Scenario: Your app bundle size is too large. How do you optimize it?,"Use Hermes, enable ProGuard (Android) or bitcode (iOS), optimize images, and remove unused dependencies."
+Frontend,React Native,Hard,How does React Native handle multi-threading?,"JavaScript runs on JS thread, UI updates on UI thread, and heavy tasks can use native threads."
+Frontend,React Native,Hard,What is the difference between ProGuard and Hermes optimization?,"ProGuard shrinks/obfuscates Java bytecode, Hermes optimizes JS execution."
+Frontend,React Native,Hard,How do you handle push notifications in React Native?,Use libraries like Firebase Cloud Messaging (FCM) or native push notification modules.
+Frontend,React Native,Hard,Scenario: You need to enable background tasks like location tracking. How would you do this in React Native?,Use Headless JS (Android) or Background Fetch (iOS) with appropriate native configuration.
+Frontend,React Native,Hard,Explain how OTA updates differ from App Store/Play Store updates in React Native.,"OTA updates modify JS bundle only, while App Store updates modify native binaries."
+Frontend,React Native,Hard,True/False: OTA updates are allowed for changing native code.,False.
+Frontend,React Native,Hard,How do you secure sensitive data in a React Native app?,"Use SecureStore, Keychain (iOS), Keystore (Android), and never hardcode keys."
+Frontend,React Native,Hard,Scenario: Your app is crashing only in production. How do you debug it?,Use crash reporting tools like Sentry or Firebase Crashlytics with source maps.
+Frontend,React Native,Hard,What is the difference between useCallback and useMemo in React Native optimization?,"useCallback memoizes functions, useMemo memoizes computed values."
+Frontend,React Native,Hard,Fill in the blank: React Native apps can use ______ to run heavy computations off the main thread.,Worker threads / Background threads.
+Frontend,React Native,Hard,Explain how to integrate native modules with TypeScript support.,Write TypeScript type definitions (.d.ts) for native modules or use React Native TypeScript templates.
+Frontend,React Native,Hard,Scenario: You need to test your React Native app’s performance under stress. Which tools would you use?,"Detox, Appium, or Flipper Performance Plugin."
+Frontend,React Native,Hard,What is the role of Fast Refresh in React Native?,It reloads components instantly while preserving state during development.
+Frontend,React Native,Hard,How do you optimize FlatList rendering for thousands of items?,"Use windowSize, initialNumToRender, getItemLayout, removeClippedSubviews, and memoized row components."
+Frontend,React Native,Hard,Scenario: You want to run multiple React Native apps in a monorepo. Which tool would you use?,"Nx, Lerna, or Yarn Workspaces."
+Frontend,React Native,Hard,What is the difference between inline styles and StyleSheet in React Native performance?,StyleSheet is more performant as it reduces object creation during re-renders.
+Frontend,React Native,Hard,Explain how React Native integrates with CI/CD pipelines.,"By configuring builds with Fastlane, GitHub Actions, or Bitrise for automated testing and deployment."
+Frontend,React Native,Hard,True/False: Hermes supports debugging in Chrome DevTools.,True.
+Frontend,React Native,Hard,Scenario: You want to profile JavaScript execution performance. Which tool would you use?,Flipper or Chrome Performance Profiler.
+Frontend,React Native,Hard,What is the difference between Detox and Jest for React Native testing?,"Jest is for unit testing, Detox is for end-to-end testing on devices."
+Frontend,React Native,Hard,Fill in the blank: React Native uses ______ under the hood to render native UI.,Native platform components.
+Frontend,React Native,Hard,How do you integrate TypeScript with React Native?,By initializing with npx react-native init MyApp --template react-native-template-typescript.
+Frontend,React Native,Hard,Scenario: You want to implement biometric authentication in React Native. Which library do you use?,react-native-touch-id or react-native-fingerprint-scanner.
+Frontend,React Native,Hard,What is the difference between synchronous and asynchronous animations in React Native?,"Synchronous may block UI, asynchronous are smoother and offloaded to UI thread."
+Frontend,React Native,Hard,How do you enable Hermes in a React Native project?,Update android/app/build.gradle with enableHermes: true.
+Frontend,React Native,Hard,Scenario: You need to integrate payments in your app. How would you achieve this?,"Use libraries like react-native-payments, Stripe SDK, or native modules."
+Frontend,React Native,Hard,What is the purpose of InteractionManager in React Native?,It defers heavy tasks until interactions/animations are finished for smoother UI.
