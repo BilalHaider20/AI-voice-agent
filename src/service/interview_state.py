@@ -1,45 +1,39 @@
-"""Interview state schema for the LangGraph state machine."""
-
-from typing import TypedDict, List, Optional
+from typing import Annotated, List, Optional, TypedDict, Union, Dict
+import operator
+from langchain_core.messages import BaseMessage
+from pydantic import BaseModel, Field
 
 
 class QuestionRecord(TypedDict):
-    question_id: str
-    question_number: int
+    id: str
     question: str
-    answer: str
-    candidate_answer: str
-    score: Optional[int]
-    feedback: Optional[str]
+    user_answer: Optional[str]
+    # score: int
+    # feedback: Dict[str, str]
 
 
+# --- STATE MANAGEMENT ---
 class InterviewState(TypedDict):
-    """State for the interview agent."""
-    
-    # Interview context
-    # job_title: str
-    # experience_level: str
-    category: str
+    """
+    Maintains the state of the interview, including history and progress.
+    """
+    messages: Annotated[List[BaseMessage], operator.add]
+    category: str | None
     skill: str
-    
-    # Interview progress
-    current_question_index: int
+    max_questions: int
+    # questions_asked is the single source of truth for question tracking.
+    # Use len(questions_asked) instead of a separate question_count.
     questions_asked: List[QuestionRecord]
-    
-    # Interview results
-    total_score: Optional[int]
-    overall_feedback: Optional[str]
-    report: Optional[dict]
-    
-    
-    # Interview status
-    is_complete: bool # True if interview is completed
-    current_stage: str # "greeting", "question", "feedback", "completed"
-    
-    # Interview configuration
-    max_questions: int # Maximum number of questions to ask
-    # time_limit: Optional[int]
-    
-    # Interview session
-    # session_id: str
-    # room_id: str
+    # Flags to control flow
+    is_off_topic: bool
+    is_complete: bool
+
+
+
+# Validation
+class ValidationResult(BaseModel):
+    """Whether the candidate's response is off-topic."""
+    is_off_topic: bool = Field(
+        description="True if the response is off-topic or casual chat, "
+                    "False if it's a genuine attempt to answer the question."
+        )    
