@@ -1,11 +1,55 @@
 import pytest
 from livekit.agents import AgentSession, inference, llm
 
-from agent import Interviewer
+from agent import TOPIC_LABELS, Interviewer, InterviewState
 
 
 def _llm() -> llm.LLM:
     return inference.LLM(model="openai/gpt-4.1-mini")
+
+
+# ---------------------------------------------------------------------------
+# InterviewState unit tests (pure Python, no LLM needed)
+# ---------------------------------------------------------------------------
+
+
+def test_interview_state_defaults() -> None:
+    """InterviewState starts with no topic selected and the interview incomplete."""
+    state = InterviewState()
+    assert state.selected_topic is None
+    assert state.interview_complete is False
+    assert state.off_topic_count == 0
+    assert state.notes == {}
+
+
+def test_interview_state_topic_assignment() -> None:
+    """selected_topic stores the topic key after assignment."""
+    state = InterviewState()
+    for key in TOPIC_LABELS:
+        state.selected_topic = key
+        assert state.selected_topic == key
+
+
+def test_interview_state_notes_per_topic() -> None:
+    """Notes are grouped by topic key and accumulate correctly."""
+    state = InterviewState()
+    state.notes.setdefault("oop", []).append("strong encapsulation answer")
+    state.notes.setdefault("oop", []).append("missed polymorphism example")
+    state.notes.setdefault("dsa", []).append("good BFS explanation")
+    assert state.notes["oop"] == [
+        "strong encapsulation answer",
+        "missed polymorphism example",
+    ]
+    assert state.notes["dsa"] == ["good BFS explanation"]
+
+
+def test_interview_state_off_topic_count() -> None:
+    """off_topic_count increments independently of other fields."""
+    state = InterviewState()
+    state.off_topic_count += 1
+    assert state.off_topic_count == 1
+    state.off_topic_count += 1
+    assert state.off_topic_count == 2
 
 
 # ---------------------------------------------------------------------------
@@ -15,7 +59,7 @@ def _llm() -> llm.LLM:
 
 @pytest.mark.asyncio
 async def test_interviewer_introduces_itself() -> None:
-    """Interviewer greets the candidate, introduces itself as Alex, and explains the format."""
+    """Interviewer greets the candidate as Alex and mentions the topic-selection format."""
     async with (
         _llm() as llm,
         AgentSession(llm=llm) as session,
@@ -34,12 +78,13 @@ async def test_interviewer_introduces_itself() -> None:
 
                 The response must:
                 - Mention the interviewer's name "Alex"
-                - Reference at least one of the three technical topics:
+                - Indicate that the candidate will choose or select a topic,
+                  OR reference at least one of the three available topics:
                   Object-Oriented Programming, Data Structures and Algorithms, or Databases
 
                 The response may include:
                 - A warm welcome
-                - A brief description of the interview format or structure
+                - A brief description of the session format (one topic of the candidate's choice)
                 - A request for the candidate to introduce themselves
                 """,
             )
@@ -49,13 +94,13 @@ async def test_interviewer_introduces_itself() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Phase 2 — OOP
+# Phase 2 — Topic selection
 # ---------------------------------------------------------------------------
 
 
 @pytest.mark.asyncio
-async def test_interviewer_asks_oop_after_intro() -> None:
-    """After the candidate's self-introduction, the interviewer transitions to OOP questions."""
+async def test_interviewer_asks_candidate_to_select_topic() -> None:
+    """After the candidate's introduction, the interviewer asks them to choose a topic."""
     async with (
         _llm() as llm,
         AgentSession(llm=llm) as session,
@@ -75,23 +120,172 @@ async def test_interviewer_asks_oop_after_intro() -> None:
             .judge(
                 llm,
                 intent="""
-                The interviewer transitions toward technical interview questions.
+                The interviewer asks the candidate to choose one interview topic.
 
-                Acceptable responses:
-                - Acknowledging the introduction and announcing the start of technical questions
-                - Asking an OOP-related question such as the four pillars, SOLID principles,
-                  design patterns, inheritance, abstraction, encapsulation, polymorphism,
-                  interfaces, abstract classes, or composition vs inheritance
-                - Presenting a scenario-based OOP question (system design involving OOP concepts)
+                The response must:
+                - Ask the candidate which topic they would like to focus on
+                - Name at least one of the three topics: Object-Oriented Programming,
+                  Data Structures and Algorithms, or Databases
 
                 The response must NOT:
-                - Only ask more personal background questions without any technical content
-                - Be completely unrelated to OOP or software engineering
+                - Jump straight into technical questions without asking the candidate
+                  to select a topic first
+                - Be completely unrelated to software engineering
                 """,
             )
         )
 
         result.expect.no_more_events()
+
+
+@pytest.mark.asyncio
+async def test_interviewer_starts_oop_after_selection() -> None:
+    """When the candidate says they want OOP, the interviewer asks an OOP question."""
+    async with (
+        _llm() as llm,
+        AgentSession(llm=llm) as session,
+    ):
+        await session.start(Interviewer())
+
+        result = await session.run(
+            user_input="I'd like to do Object-Oriented Programming please."
+        )
+
+        await (
+            result.expect.next_event()
+            .is_message(role="assistant")
+            .judge(
+                llm,
+                intent="""
+                The interviewer acknowledges the topic choice and begins OOP questions.
+
+                Acceptable responses:
+                - Confirming the topic is OOP and asking an OOP question
+                - Asking about the four pillars of OOP
+                - Asking about SOLID principles, design patterns, composition vs
+                  inheritance, or abstract classes vs interfaces
+                - Presenting a scenario-based OOP question
+
+                The response must NOT:
+                - Ask a DSA or Databases question
+                - Ignore the candidate's topic selection and ask about a different topic
+                """,
+            )
+        )
+
+        result.expect.no_more_events()
+
+
+@pytest.mark.asyncio
+async def test_interviewer_starts_dsa_after_selection() -> None:
+    """When the candidate says they want DSA, the interviewer asks a DSA question."""
+    async with (
+        _llm() as llm,
+        AgentSession(llm=llm) as session,
+    ):
+        await session.start(Interviewer())
+
+        result = await session.run(
+            user_input="Let's go with Data Structures and Algorithms."
+        )
+
+        await (
+            result.expect.next_event()
+            .is_message(role="assistant")
+            .judge(
+                llm,
+                intent="""
+                The interviewer acknowledges the topic choice and begins DSA questions.
+
+                Acceptable responses:
+                - Confirming the topic is DSA / data structures and algorithms
+                - Asking about sorting algorithms, hash maps vs trees, dynamic
+                  programming, BFS vs DFS, or a scenario-based DSA question
+
+                The response must NOT:
+                - Ask an OOP or Databases question
+                - Ignore the candidate's topic selection
+                """,
+            )
+        )
+
+        result.expect.no_more_events()
+
+
+@pytest.mark.asyncio
+async def test_interviewer_starts_databases_after_selection() -> None:
+    """When the candidate says they want Databases, the interviewer asks a DB question."""
+    async with (
+        _llm() as llm,
+        AgentSession(llm=llm) as session,
+    ):
+        await session.start(Interviewer())
+
+        result = await session.run(user_input="I want to do Databases.")
+
+        await (
+            result.expect.next_event()
+            .is_message(role="assistant")
+            .judge(
+                llm,
+                intent="""
+                The interviewer acknowledges the topic choice and begins Databases questions.
+
+                Acceptable responses:
+                - Confirming the topic is Databases
+                - Asking about SQL vs NoSQL, database indexes, ACID properties,
+                  normalization, or a scenario-based database question
+
+                The response must NOT:
+                - Ask an OOP or DSA question
+                - Ignore the candidate's topic selection
+                """,
+            )
+        )
+
+        result.expect.no_more_events()
+
+
+@pytest.mark.asyncio
+async def test_interviewer_clarifies_ambiguous_topic_selection() -> None:
+    """When the candidate gives an unclear topic choice, the interviewer asks to clarify."""
+    async with (
+        _llm() as llm,
+        AgentSession(llm=llm) as session,
+    ):
+        await session.start(Interviewer())
+
+        result = await session.run(
+            user_input="Hmm, maybe something with systems? I'm not sure."
+        )
+
+        await (
+            result.expect.next_event()
+            .is_message(role="assistant")
+            .judge(
+                llm,
+                intent="""
+                The interviewer does not start technical questions because the topic
+                selection was unclear. Instead it asks the candidate to choose again.
+
+                The response must:
+                - Ask the candidate to choose one of the three specific topics:
+                  Object-Oriented Programming, Data Structures and Algorithms,
+                  or Databases
+
+                The response must NOT:
+                - Start asking any technical interview questions
+                - Choose a topic on behalf of the candidate without their confirmation
+                """,
+            )
+        )
+
+        result.expect.no_more_events()
+
+
+# ---------------------------------------------------------------------------
+# Phase 3 — OOP follow-up probing (topic-agnostic behavior)
+# ---------------------------------------------------------------------------
 
 
 @pytest.mark.asyncio

@@ -25,11 +25,10 @@ logger = logging.getLogger("agent")
 load_dotenv(".env.local")
 
 # ---------------------------------------------------------------------------
-# Interview topics and question banks
+# Topic registry
 # ---------------------------------------------------------------------------
 
-TOPICS = ["oop", "dsa", "databases"]
-
+# Valid topic keys used as arguments to select_topic().
 TOPIC_LABELS: dict[str, str] = {
     "oop": "Object-Oriented Programming",
     "dsa": "Data Structures and Algorithms",
@@ -62,22 +61,40 @@ INTERVIEW STRUCTURE  (follow phases strictly in order)
 
 PHASE 1 — WELCOME (start here immediately)
 • Greet the candidate warmly and introduce yourself as Alex.
-• In one or two sentences explain the format: three technical topics — \
-Object-Oriented Programming, Data Structures and Algorithms, and Databases — each roughly \
-five to seven minutes.
+• In one sentence explain the format: this session will focus on one technical topic \
+of their choice — Object-Oriented Programming, Data Structures and Algorithms, or Databases.
 • Ask the candidate to briefly introduce themselves and share their background.
-• Once they finish their introduction, call `advance_to_next_topic` to begin OOP.
 
-PHASE 2 — OBJECT-ORIENTED PROGRAMMING
-Entered via `advance_to_next_topic`. Open by saying you will start with OOP questions.
-Ask two or three of the following — mix concept questions with scenario questions:
+PHASE 2 — TOPIC SELECTION (after the candidate finishes their introduction)
+• Ask: "Which topic would you like to focus on today — Object-Oriented Programming, \
+Data Structures and Algorithms, or Databases?"
+• Listen carefully to their response and map it to the correct key:
+  - "OOP", "object-oriented", "object oriented programming", "classes" → key: 'oop'
+  - "DSA", "data structures", "algorithms", "data structures and algorithms" → key: 'dsa'
+  - "databases", "database", "SQL", "NoSQL", "db" → key: 'databases'
+• Once they clearly choose one topic, call `select_topic` with the matching key.
+• If their choice is unclear or does not match one of the three options, do NOT call \
+`select_topic` — instead ask them to choose again:
+  "I want to make sure I pick the right topic — could you say which one: \
+Object-Oriented Programming, Data Structures and Algorithms, or Databases?"
+• Do NOT ask any technical questions until `select_topic` has been successfully called.
 
+PHASE 3 — TOPIC INTERVIEW (entered once `select_topic` returns successfully)
+Open by saying: "Great, let's get into [topic name]." \
+Then ask two or three questions from the matching section below. \
+Mix at least one concept question with at least one scenario question. \
+Apply all conversational behaviours (follow-ups, clarification, hints). \
+When the topic has been covered adequately, call `conclude_interview`.
+
+────────────────────────────────────────
+OOP — Object-Oriented Programming
+────────────────────────────────────────
 CONCEPT QUESTIONS (choose one or two):
 • "Can you walk me through the four pillars of OOP and give me a real-world example \
 of each one?"
 • "What is the difference between composition and inheritance? When would you favour \
 composition over inheritance?"
-• "Can you explain the SOLID principles? Pick one that you've actively applied and \
+• "Can you explain the SOLID principles? Pick one that you have actively applied and \
 walk me through how you used it."
 • "What is the difference between an abstract class and an interface? When would you \
 use each?"
@@ -93,13 +110,9 @@ and how would you refactor it?"
 Walk me through how you would design this using a design pattern — no code, just your \
 thought process."
 
-After covering OOP adequately, call `advance_to_next_topic`.
-
-PHASE 3 — DATA STRUCTURES AND ALGORITHMS
-Entered via the second `advance_to_next_topic`. Open by saying you will now shift to \
-data structures and algorithms.
-Ask two or three of the following:
-
+────────────────────────────────────────
+DSA — Data Structures and Algorithms
+────────────────────────────────────────
 CONCEPT QUESTIONS (choose one or two):
 • "Can you compare the time and space complexities of common sorting algorithms, and \
 tell me when you would reach for each one?"
@@ -117,13 +130,9 @@ most frequent events in near-real-time. Walk me through your approach."
 find a function with quadratic complexity iterating over user posts. How would you \
 diagnose and fix this, and what would you replace it with?"
 
-After covering DSA adequately, call `advance_to_next_topic`.
-
-PHASE 4 — DATABASES
-Entered via the third `advance_to_next_topic`. Open by saying you will now move on to \
-databases.
-Ask two or three of the following:
-
+────────────────────────────────────────
+DATABASES
+────────────────────────────────────────
 CONCEPT QUESTIONS (choose one or two):
 • "What is the difference between SQL and NoSQL databases, and how do you decide which \
 to use for a new project?"
@@ -144,9 +153,7 @@ document store? What are the read and write trade-offs?"
 through how you would implement this safely, handling the case where the system crashes \
 mid-transfer."
 
-After covering Databases adequately, call `conclude_interview`.
-
-PHASE 5 — WRAP-UP (triggered by `conclude_interview`)
+PHASE 4 — WRAP-UP (triggered by `conclude_interview`)
 • Thank the candidate genuinely.
 • Highlight one or two specific positive aspects you noticed.
 • Explain next steps: the hiring team will review notes and reach out within one week.
@@ -216,29 +223,26 @@ candidate explicitly asked about.
 
 @dataclass
 class InterviewState:
-    """Tracks progress through the structured interview phases.
+    """Tracks the state of a single-topic voice interview session.
 
-    ``current_topic_index`` starts at -1 (welcome/intro phase) and is
-    incremented by ``advance_to_next_topic`` as the interview progresses
-    through the TOPICS list (0 = OOP, 1 = DSA, 2 = Databases).  A value
-    of 3 or greater means all topics have been covered.
+    ``selected_topic`` is ``None`` until the candidate chooses a topic via
+    ``select_topic``.  Once set it is one of the keys in ``TOPIC_LABELS``
+    (``'oop'``, ``'dsa'``, or ``'databases'``).
+
+    Known Limitations
+    -----------------
+    * Only one topic per session — multi-topic ordering is not supported.
+    * No difficulty level (junior / senior) is recorded or used.
+    * ``notes`` are in-memory only; they are lost when the session ends.
+    * No per-question deduplication — the same question could theoretically
+      be asked twice within a session.
+    * No time-limit enforcement per topic.
     """
 
-    current_topic_index: int = -1  # -1 = welcome/intro phase
+    selected_topic: Optional[str] = None  # None = topic not yet chosen
     interview_complete: bool = False
     off_topic_count: int = 0
     notes: dict[str, list[str]] = field(default_factory=dict)
-
-    @property
-    def current_topic(self) -> Optional[str]:
-        if self.current_topic_index < 0 or self.current_topic_index >= len(TOPICS):
-            return None
-        return TOPICS[self.current_topic_index]
-
-    @property
-    def current_topic_label(self) -> Optional[str]:
-        topic = self.current_topic
-        return TOPIC_LABELS.get(topic) if topic else None
 
 
 # ---------------------------------------------------------------------------
@@ -249,8 +253,9 @@ class InterviewState:
 class Interviewer(Agent):
     """Production-grade technical interview agent.
 
-    Conducts a structured voice interview across OOP, DSA, and Databases.
-    Handles off-topic detection, clarification requests, follow-up probing,
+    The candidate selects one topic (OOP, DSA, or Databases) at the start of
+    the session.  The agent then conducts a focused interview on that topic,
+    handling off-topic requests, clarification prompts, follow-up probing,
     and graduated hints for stuck candidates.
     """
 
@@ -263,35 +268,63 @@ class Interviewer(Agent):
     # ------------------------------------------------------------------
 
     @function_tool
-    async def advance_to_next_topic(self, context: RunContext) -> str:
-        """Advance the interview to the next technical topic.
+    async def select_topic(self, context: RunContext, topic: str) -> str:
+        """Record the candidate's chosen interview topic and begin that topic's questions.
 
-        Call this when you have finished the current phase and are ready to move on:
-        - After the candidate's introduction → begins OOP
-        - After OOP → begins DSA
-        - After DSA → begins Databases
+        Call this once the candidate has clearly stated which topic they want.
+        If their choice is ambiguous, do NOT call this tool — ask them to
+        choose again, then call it once they clarify.
+
+        Handles topic changes: if the candidate changes their mind before any
+        questions have been asked, this tool accepts the new choice and returns
+        updated instructions.
+
+        Args:
+            topic: Must be exactly one of: 'oop', 'dsa', 'databases'
         """
-        self.state.current_topic_index += 1
-        topic = self.state.current_topic
-        if topic is None:
-            self.state.interview_complete = True
-            logger.info("Interview advanced past all topics; marking complete")
+        normalized = topic.lower().strip()
+        if normalized not in TOPIC_LABELS:
+            logger.warning("select_topic called with invalid key %r", topic)
             return (
-                "All technical topics have been covered. "
-                "Please deliver the wrap-up now."
+                "Invalid topic key — do not use this return value to start questions. "
+                "Ask the candidate to choose one of: Object-Oriented Programming, "
+                "Data Structures and Algorithms, or Databases. "
+                "Then call select_topic again with 'oop', 'dsa', or 'databases'."
             )
-        label = self.state.current_topic_label
-        logger.info("Interview advanced to topic: %s", topic)
-        return f"Now entering topic: {label}. Begin asking {label} questions."
+
+        label = TOPIC_LABELS[normalized]
+
+        if (
+            self.state.selected_topic is not None
+            and self.state.selected_topic != normalized
+            and not self.state.interview_complete
+        ):
+            old_label = TOPIC_LABELS[self.state.selected_topic]
+            self.state.selected_topic = normalized
+            logger.info("Candidate changed topic: %s → %s", old_label, label)
+            return (
+                f"Topic changed from {old_label} to {label}. "
+                f"Acknowledge the change briefly and begin the {label} interview now."
+            )
+
+        self.state.selected_topic = normalized
+        logger.info("Candidate selected topic: %s", normalized)
+        return (
+            f"Topic selected: {label}. "
+            f"Open by saying 'Great, let's get into {label}.' "
+            f"Then ask two or three questions from the {label} section."
+        )
 
     @function_tool
     async def conclude_interview(self, context: RunContext) -> str:
         """Mark the interview as complete and deliver the wrap-up.
 
-        Call this after finishing all Databases questions.
+        Call this after finishing all questions for the selected topic.
         """
         self.state.interview_complete = True
-        logger.info("Interview concluded")
+        logger.info(
+            "Interview concluded (topic: %s)", self.state.selected_topic or "unknown"
+        )
         return (
             "The interview is now complete. "
             "Deliver the wrap-up: thank the candidate sincerely, highlight one or two "
@@ -313,7 +346,7 @@ class Interviewer(Agent):
         The return value tells you how firm to be on the next occurrence.
 
         Args:
-            topic: The current interview topic or phase, e.g. 'oop', 'intro', 'general'
+            topic: The current interview topic or phase, e.g. 'oop', 'selection', 'general'
             description: A short description of what the candidate asked for
         """
         self.state.off_topic_count += 1
